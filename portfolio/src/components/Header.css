@@ -3,7 +3,7 @@
     
     height: 6vh;
     width: 100vw;
-    background-color: rgba(5, 53, 111, 0.447);
+    background-color: #000000;
  
 }
 
@@ -15,12 +15,21 @@
     padding-left: 20vw;
     padding-right: 20vw;
     color: rgb(255, 255, 255);
+    font-family: cursive;
     
    
 }
 
 
 .links:hover{
-    color: rgb(47, 47, 150);
+    color: rgb(47, 150, 141);
+}
+
+@media only screen and (max-width:375px){
+    .header_box{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    
 }
 

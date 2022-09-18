@@ -2,10 +2,11 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
+// Function to return the header component
 function Header(){
     return(
         
-            <div>
+            
             <div class ='main_container'>
                 <div class="row header_box">
                     <div class="col links">
@@ -22,7 +23,7 @@ function Header(){
                     
                 </div>
             </div>
-            </div>
+            
         
     );
 }
