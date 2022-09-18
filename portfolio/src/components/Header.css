@@ -1,24 +1,26 @@
-.col{
-    background-color: rgb(131, 131, 127);
-    
-}
 
 .main_container{
     
     height: 6vh;
-
+    width: 100vw;
+    background-color: rgba(5, 53, 111, 0.447);
+ 
 }
 
 .header_box{
     text-align: center;
     height: 6vh;
+    width: 100vw;
     padding: 1vh;
     padding-left: 20vw;
     padding-right: 20vw;
-    color: white;
+    color: rgb(255, 255, 255);
+    
    
 }
 
-.nav-link:hover{
-    color: blue;
+
+.links:hover{
+    color: rgb(47, 47, 150);
 }
+
