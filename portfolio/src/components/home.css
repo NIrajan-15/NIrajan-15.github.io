@@ -38,32 +38,25 @@
 }
 
 .icon_box2{
-    margin-left: -22vw;
+    margin-left: -25vw;
 }
+
 
 svg{
     height: 10vh;
-    width: 2vw;
+    width: 2.5vw;
 }
 
-
-
-@media only screen and (max-width:1200px)
-{
-    svg{
-        height: 11vh;
-        width: 2.5vw;
-    }
-    .icon_box2{
-        margin-left: -20vw;
-    }
-}
 
 @media only screen and (max-width:800px)
 {
     svg{
         height: 10vh;
-        width: 4vw;
+        width: 5vw;
+    }
+
+    .icon_box2{
+        margin-left: -20vw
     }
 
     
@@ -81,16 +74,9 @@ svg{
     
 }
 
-@media only screen and(max-width:550px){
-    svg{
-        height: 15vh;
-        width: 4vw;
-    }
-}
 
 .Connect_box{
     width:35vw;
-    padding-left: 5vw;
     height: 10vh;
     
 }
@@ -109,8 +95,15 @@ svg{
     background-image: url('Images/coder.gif');
     background-repeat: no-repeat;
     background-position: auto;
-    height: 25vh;
     width: 4vw;
+    height: 25vh;
     color: white;
+    
+    margin-left: 4vw;
+    
+   
+    
+    
+    
     
 }
