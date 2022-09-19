@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 // Function to return the header component
 function Header(){
@@ -10,14 +10,14 @@ function Header(){
             <div class ='main_container'>
                 <div class="row header_box">
                     <div class="col links">
-                    <Link class="nav-link" to='/home'>Home</Link>
+                    <NavLink  exact  class="nav-link" activeClassName="active" to='/about'>About</NavLink>
                         
                     </div>
                     <div class="col links">
-                        <Link class="nav-link" to='/about'>About</Link>
+                        <NavLink  class="nav-link" activeClassName="active" to='/projects'>Projects</NavLink>
                     </div>
                     <div  class="col links">
-                    <Link class="nav-link" to='/contacts'>Contacts</Link>
+                    <NavLink eaxct class="nav-link"  activeClassName="active" to='/contact'>Contact</NavLink>
                     </div>
                     
                     

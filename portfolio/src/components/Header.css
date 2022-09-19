@@ -4,6 +4,12 @@
     height: 6vh;
     width: 100vw;
     background-color: #000000;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    
+    
+    
  
 }
 
@@ -16,16 +22,23 @@
     padding-right: 20vw;
     color: rgb(255, 255, 255);
     font-family: cursive;
+    border-style: dotted;
+    border-color: black;
     
    
 }
 
-
-.links:hover{
-    color: rgb(47, 150, 141);
+.links{
+    color: white !important;
 }
 
-@media only screen and (max-width:375px){
+.active{
+    color:rgb(47, 150, 141);
+}
+
+
+
+@media only screen and (max-width:400px){
     .header_box{
         padding-left: 10vw;
         padding-right: 10vw;

@@ -1,0 +1,62 @@
+.contactContainer{
+    padding-top: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: black;
+    margin-top: 3vh;
+    height: 80vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    color: white;
+    font-family: cursive;
+    border-radius: 2vh;
+    box-shadow: 10px 10px  rgb(175, 219, 246);
+    margin-bottom: 5vh;
+}
+
+.messageInput{
+    height: 30vh;
+    width: 50vw;
+    
+    text-align: center;
+    border-radius: 2vh;
+
+}
+
+.top{
+    width: 50vw;
+    height: 10vh;
+    text-align: center;
+    border-radius: 2vh;
+
+}
+
+.nameBox, .emailBox, .Message{
+    
+    margin-bottom: 1vh;
+    
+}
+
+.submitButton{
+    height: 5vh;
+    width: 5vw;
+    border-radius: 1vh;
+    text-align: center;
+    font-family: cursive;
+    background-color: black;
+    
+}
+
+.submit{
+    padding-left: 28vw;
+    padding-right: 28vw;
+    
+    
+}
+
+
+
+
+
+
+
