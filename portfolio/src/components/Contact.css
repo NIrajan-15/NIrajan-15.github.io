@@ -12,6 +12,12 @@
     border-radius: 2vh;
     box-shadow: 10px 10px  rgb(175, 219, 246);
     margin-bottom: 5vh;
+    
+    
+  background-color: rgb(70, 150, 200);  /* 100% transparent */
+  
+  
+  
 }
 
 .messageInput{
@@ -38,8 +44,6 @@
 }
 
 .submitButton{
-    height: 5vh;
-    width: 5vw;
     border-radius: 1vh;
     text-align: center;
     font-family: cursive;
@@ -50,8 +54,13 @@
 .submit{
     padding-left: 28vw;
     padding-right: 28vw;
+    padding-top: 2vh;
+    border-radius: 1vh;
     
-    
+}
+
+input{
+    border-style: none;
 }
 
 

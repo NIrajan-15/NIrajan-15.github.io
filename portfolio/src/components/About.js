@@ -6,10 +6,12 @@ import './Images/Resume.pdf'
 
 // Function that returns home component
 function About(){
+
     return(
-            //The root container for home component
+
             <div class="container">
-                <div class="row welcome_box">
+            
+            <div class="row welcome_box">
                     
                 </div>
                 <div class="row a">
@@ -19,14 +21,16 @@ function About(){
                 </div>
                 
                 {/* Container for introduction */}
-                <div class="col-8 name_box">
-                        Hi, I'm
+                <div class="col-6 name_box">
+                        
+                            Hi, I'm
                         <h1>Nirajan Sangarula</h1>
                         <br/>
-                        I'm a Developer.
+                        <h4>I'm a Developer.</h4>
                         <br/><br/>
                         
-                    <h6>Feel Free to Checkout my <a href="Images/Resume.pdf" download>Resume</a> .</h6>
+                    <h4>Feel Free to Checkout my <a href="Images/Resume.pdf" download>Resume</a> .</h4>
+                        
 
                     <div class="Connect_box row">
                         
@@ -39,8 +43,6 @@ function About(){
                         </a>
                         </div>
                         
-                            
-                        
                         <div class="col-3"> 
                         {/* Linkedin SVG */}
                         <a href="https://www.linkedin.com/in/nirajan-sangraula/" class="nav-link" target="_blank" rel="noopener noreferrer">
@@ -50,25 +52,19 @@ function About(){
                         </a>
                         </div>
                         
-                        
-                        
-                </div>
+                    </div>
                  
                         {/* container to icons to connect */}
                             
                 </div>
-
                 
-                 </div>
+                </div> 
                  
-                 
-                 
+        </div>
+               
+);
 
-                 
-                
-                      
-            </div>             
-);}
+}
 
 // export function home to access on other files
 export default About;
