@@ -18,16 +18,59 @@
 }
 
 .projRow{
-    height: 40vh;
+    height: 30vw;
     width: 60vw;
     text-align: center;
     background-color: black;
-    color: white;
+    color: rgb(180, 56, 56);
     margin-top: 2vh;
-    box-shadow: inset 10px 10px  rgb(175, 219, 246);
+    box-shadow: 10px 10px  rgb(175, 219, 246);
     border-radius: 2vh;
     padding-left: 2vw;
+    
 }
+
+.despBox{
+    
+    color: white;
+    padding-top: 10vh;
+    
+}
+
+.imageBox{
+    
+    height: 45vh;
+    
+    background-repeat: repeat;
+    background-position: auto;
+    
+    
+   
+}
+
+img{
+    height: 30vh;
+    border-style: dashed;
+    width:30vw;
+
+}
+
+.imageBox,.despBox{
+    margin-left: 1.2vw;
+    margin-top: 3vh;
+}
+
+.maindesp{
+    text-align: justify;
+    padding: 1vh;
+    
+}
+
+.toolsBox{
+    padding-top: 5vh;
+}
+
+
 
 @media only screen and (max-width: 821px){
     .projRow{
@@ -79,7 +122,7 @@
     }
     
     .projRow{
-        height: 40vh;
+        height: 50vh;
         width: 80vw;
         
         
@@ -87,37 +130,14 @@
 
 }
 
-.despBox{
-    
-    color: white;
-    
-}
 
-.imageBox{
-    
-    height: 30vh;
-    background-image: url('Images/construction.gif');
-    background-repeat: repeat;
-    background-position: auto;
-    border-style: dashed;
-    
-   
-}
 
-.imageBox,.despBox{
-    margin-left: 1.2vw;
-    margin-top: 1vh;
-}
 
-.maindesp{
-    text-align: justify;
-    padding: 1vh;
-    
-}
-.toolsBox{
-    text-align: justify;
-    padding-left: 2.5vw;
-}
+
+
+
+
+
 
 
 
