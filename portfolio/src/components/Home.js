@@ -6,10 +6,11 @@ function Home(){
 
     const[enter, setEnter] = useState(false);
     
-    const[kid, setKid] = useState("");
+    const[kid, setKid] = useState(false);
 
     useEffect(() => {
-        const thanksTimer = setTimeout(() => setEnter(true), 3000);
+        const thanksTimer = setTimeout(() => setEnter(true), 1500);
+        
         return () => clearTimeout(thanksTimer);
         
     }, [enter]);
@@ -17,7 +18,7 @@ function Home(){
     
 
     useEffect(()=>{
-        const kidTimer = setTimeout(()=>setKid("Just kidding !"),1000);
+        const kidTimer = setTimeout(()=>setKid(true),500);
         return () => clearTimeout(kidTimer)
     },[kid]);
 
@@ -33,7 +34,11 @@ function Home(){
                 
                 <error class="welmsg">
                 <h2> Error 404: Page not Found!</h2><br/><br/>
-                <h2>{kid}</h2>
+                {(kid === true &&
+                    <kid>
+                        <h2><p>Just Kidding! &#128513; </p></h2>
+                    </kid>
+                    )}
                 </error>
              
             
