@@ -1,11 +1,8 @@
 .projCol{
     
     width: 60vw;
-    height: 150vh;
     padding: 5vh;
     overflow: hidden;
-    
-    
     
 }
 
@@ -18,41 +15,25 @@
 }
 
 .projRow{
-    height: 30vw;
+    height: 60vh;
     width: 60vw;
     text-align: center;
     background-color: black;
-    color: rgb(180, 56, 56);
+    color: white;
     margin-top: 2vh;
     box-shadow: 10px 10px  rgb(175, 219, 246);
-    border-radius: 2vh;
-    padding-left: 2vw;
-    
+    border-radius: 2vh;   
 }
 
 .despBox{
     
     color: white;
-    padding-top: 10vh;
-    
+    padding-top: 10vh;    
 }
-
-.imageBox{
+.imageBox,img{
     
-    height: 45vh;
-    
-    background-repeat: repeat;
-    background-position: auto;
-    
-    
-   
-}
-
-img{
-    height: 30vh;
-    border-style: dashed;
-    width:30vw;
-
+    height: 55vh;
+    color:rgb(175, 219, 246)    
 }
 
 .imageBox,.despBox{
@@ -62,51 +43,29 @@ img{
 
 .maindesp{
     text-align: justify;
-    padding: 1vh;
-    
+    padding: 1vh; 
 }
 
 .toolsBox{
     padding-top: 5vh;
 }
 
-
-
-@media only screen and (max-width: 821px){
-    .projRow{
-        padding-left: 3vw;
-    }
-
-    .despBox{
-        
-        font-size: 16px;
-        
-    }
-    
-}
-
-@media only screen and (max-wdith: 375px){
-
-    .projRow{
-        margin-right: 10vw;
-    }
-    .despBox{
-        margin-left: 10vw;
-    }
-
-}
-
-
-@media only screen and (max-width:450px){
-    .projRow{
-        padding-left: 5vw;
+@media only screen and (max-width:1500px)
+{
+    .imageBox,img{
+        height: 55vh;
     }
 }
 
-
-
-
-
+@media only screen and (max-wdith:1300px)
+{
+    .imageBox,img{
+        height: 45vh;
+    }
+    .projRow{
+        height: 60vh;
+    }
+}
 @media only screen and (max-width:1100px){
 
     .projCol{
@@ -122,12 +81,58 @@ img{
     }
     
     .projRow{
-        height: 50vh;
+        height: 55vh;
         width: 80vw;
-        
         
     }
 
+    .imageBox,img{
+        height: 49vh; 
+    }
+
+}
+
+@media only screen and (max-width: 853px){
+    .projRow{
+        padding-left: 3vw;
+        height: 75vh;
+    }
+
+    .despBox{
+        
+        font-size: 16px;
+        padding-top: 2vh;
+        margin-top: 53vh;
+        width: 1vw;
+       
+    }
+
+    .imageBox.img{
+        margin-top: 1vh;
+        width: 10vw;
+        height: 45vh;
+        border-style: dotted();
+        margin-left: -1.5vw;
+        
+    }
+  
+}
+
+@media only screen and (max-width:450px){
+    .projRow{
+        padding-left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 376px){
+
+    .projRow{
+        width: 80vw;
+        margin-right: 10vw;
+        height: 100vh;
+        margin-left: -1vw;    
+    }
+  
 }
 
 

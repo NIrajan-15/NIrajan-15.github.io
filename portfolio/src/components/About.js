@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import './Images/coder.gif'
 import './Images/Resume.pdf'
+import './Header.css'
 
 
 // Function that returns home component
@@ -21,7 +22,7 @@ function About(){
                 </div>
                 
                 {/* Container for introduction */}
-                <div class="col-6 name_box">
+                <div class="col-8 name_box">
                         
                             Hi, I'm
                         <h1>Nirajan Sangarula</h1>

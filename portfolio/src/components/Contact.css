@@ -2,7 +2,7 @@
     padding-top: 2vh;
     padding-left: 10vw;
     padding-right: 10vw;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-top: 3vh;
     height: 80vh;
     margin-left: 7vw;
@@ -10,18 +10,13 @@
     color: white;
     font-family: cursive;
     border-radius: 2vh;
-    box-shadow: 10px 10px  rgb(175, 219, 246);
+    box-shadow: 10px 10px  rgb(175, 219, 246, 0.7);
     margin-bottom: 5vh;
-    
-    
-  background-color: rgb(70, 150, 200);  /* 100% transparent */
-  
-  
   
 }
 
 .messageInput{
-    height: 30vh;
+    height: 25vh;
     width: 50vw;
     
     text-align: center;
@@ -39,7 +34,7 @@
 
 .nameBox, .emailBox, .Message{
     
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     
 }
 
@@ -53,7 +48,7 @@
 
 .submit{
     padding-left: 28vw;
-    padding-right: 28vw;
+    padding-right: 25vw;
     padding-top: 2vh;
     border-radius: 1vh;
     
@@ -61,6 +56,11 @@
 
 input{
     border-style: none;
+}
+
+.error{
+    height: 5vw;
+    
 }
 
 

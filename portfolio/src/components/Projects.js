@@ -3,7 +3,7 @@ import './Project.css'
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import coder from './Images/coder.gif';
-import bg from './Images/bgimg.jpg'
+import bg from './Images/bgimg.jpg';
 
 
 
@@ -12,16 +12,14 @@ const projects = [
         "id":1,
         "name":"TO-DO",
         "image_url":"./Images/project1",
-        "descriptioin":"A simple to-do application created to learn Django.",
-        "bullets":["Perform CURD Operations"],
+        "descriptioin":"A simple to-do application with CURD functionality created to learn Django.",
         "tools_used": ['Django','Bootstrap','HTML','CSS','sqlite3']
     },
     {
         "id":2,
-        "name":"ACM ULM Chapter Website",
+        "name":"ACM ULM Website",
         "image_url":"./Images/project2",
         "descriptioin":"A full-stack website for University of Louisiana Monroe's ACM Chapter. I personally worked on backend part.",
-        "bullets":["Implemented REST API", "Fetch leetcode data to update leader board"],
         "tools_used": ['Django','PostgreSQL','AWS ECS','Docker','AWS S3']
     },
     {
@@ -50,10 +48,9 @@ function Projects(){
                 return (
                 
                 <div class="projRow" key={project.id}>
-                    
                     <br></br>
                     <div class="row topBox">
-                        <div class="col-4 imageBox">
+                        <div class="col-6 imageBox">
                             <Carousel>
                                 
                                     <img src={coder} alt="images"/>
@@ -65,7 +62,7 @@ function Projects(){
                                 
                             </Carousel>
                         </div>
-                        <div class="col-7 despBox">
+                        <div class="col-5 despBox">
                         <h3>{project.name}</h3> 
                           <div class="maindesp">
                           {project.descriptioin}
@@ -74,25 +71,19 @@ function Projects(){
                             Tools :  Django, HTML, CSS, sqlite3
                          </div>  
                         </div>
+                        <div class="maindesp">
+                            Github: <a href="https://github.com/NIrajan-15/To-do" to="_blank">GithubLink</a>
+                        </div>
                     </div>
                     
-
                 </div>
                 </div>
                 
                 )
             })}
             
-        
-        
-
         </div>
-        </div>
-
-        
-
-        
-        
+        </div>  
     </>
     );
    

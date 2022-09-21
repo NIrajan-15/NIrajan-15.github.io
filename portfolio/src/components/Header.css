@@ -1,4 +1,6 @@
 
+
+
 .main_container{
     
     height: 6vh;
@@ -8,11 +10,7 @@
     position: sticky;
     top: 0;
     
-    
-    
-    
-    
- 
+  
 }
 
 .header_box{
@@ -26,19 +24,35 @@
     font-family: cursive;
     border-style: dotted;
     border-color: black;
-    
-   
+  
 }
 
 .links{
-    color: white !important;
+    color: white;
 }
+
+.links:hover{
+
+    color:rgb(247, 152, 152)
+
+}
+
+.links:active{
+    color: red;
+}
+
+.nav-link1,.nav-link2,.nav-link3{
+    color:white;
+}
+
 
 .active{
-    color:rgb(250, 250, 250);
+    color:rgb(150, 91, 91);
 }
 
-
+.passive{
+    color: white;
+}
 
 @media only screen and (max-width:400px){
     .header_box{
@@ -46,5 +60,13 @@
         padding-right: 10vw;
     }
     
+}
+
+@media only screen and (max-width: 300px)
+{
+    .header_box{
+        padding-left: 0vw;
+        padding-right: 0vw;
+    }
 }
 
