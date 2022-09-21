@@ -50,7 +50,7 @@ function Projects(){
                 <div class="projRow" key={project.id}>
                     <br></br>
                     <div class="row topBox">
-                        <div class="col-6 imageBox">
+                        <div class="col imageBox">
                             <Carousel>
                                 
                                     <img src={coder} alt="images"/>
@@ -62,7 +62,7 @@ function Projects(){
                                 
                             </Carousel>
                         </div>
-                        <div class="col-5 despBox">
+                        <div class="col despBox">
                         <h3>{project.name}</h3> 
                           <div class="maindesp">
                           {project.descriptioin}
