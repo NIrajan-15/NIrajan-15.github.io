@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import "./Contact.css"
 import validator from 'validator';
@@ -6,7 +6,7 @@ import validator from 'validator';
 
 function Contact(){
 
-    const[error, setError] = useState("")
+    const[error, setError] = useState(false)
     const[sub, setSub] = useState(false)
 
     const valildateEmail = (e) =>{
@@ -14,7 +14,7 @@ function Contact(){
     var email = e.target.value    
 
         if(!(validator.isEmail(email))){
-            setError("Error! Please enter a valid email.")
+            setError(true)
             setSub(false)
 
         }
@@ -24,6 +24,13 @@ function Contact(){
         }
         
     }
+
+    useEffect(()=> {
+        if(sub===false)
+        {
+            document.getElementById("form").style.padding = "2vh";
+        }
+    },[sub])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -42,7 +49,7 @@ function Contact(){
             
 
             
-            <div clas="col">
+            <div clas="col" id="form">
                 <form className="contact-form" onSubmit={sendEmail}>
                 <input type="hidden" name="contact-form"/>
                 <div class="row nameBox">
@@ -56,19 +63,27 @@ function Contact(){
                     </label>
                     <input type="text" class="top" name="email"  onChange={(e) => valildateEmail(e)}></input>
                 </div>
+                {error===true &&(
+                    <div class="error" id="error">
+                    Error! Please Enter valid Email Address.
+                </div>
+                )}
                 <input type="hidden" name="subject" />
                 <div class="row Message">
                     <label>
                     <h5>Message</h5>
                     </label>
-                    <input type="text" class="messageInput" name="message"></input>
+                    <input type="text" class="messageInput" name="message" required></input>
                 </div>
-                <div class="error" id="error">
-                    {error}
-                </div>
+                
                 {sub===true && (
                         <div class="row submit">
-                        <input type="submit" class="submitButon"  value="Send Message"/>
+                        <button type="button" class="btn btn-success"><input type="submit" class="submitButon"  value="Send Message"/></button>
+                    </div>
+                )}
+                {sub===false &&(
+                        <div class="row submit">
+                        <button type="button" class="btn btn-danger">Submit</button>
                     </div>
                 )}
                 

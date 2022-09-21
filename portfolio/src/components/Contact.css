@@ -5,8 +5,8 @@
     background-color: rgb(0, 0, 0);
     margin-top: 3vh;
     height: 80vh;
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     color: white;
     font-family: cursive;
     border-radius: 2vh;
@@ -39,28 +39,24 @@
 }
 
 .submitButton{
-    border-radius: 1vh;
-    text-align: center;
-    font-family: cursive;
-    background-color: black;
-    
+    color: green; 
+    background-color: green;  
 }
 
 .submit{
-    padding-left: 28vw;
-    padding-right: 25vw;
-    padding-top: 2vh;
-    border-radius: 1vh;
-    
+    width: 10vw; 
+    border-style: dotted;   
 }
 
 input{
     border-style: none;
+    
 }
 
 .error{
-    height: 5vw;
-    
+    height:4vh;
+    margin-bottom: 1vh;
+    color: red;   
 }
 
 
