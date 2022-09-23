@@ -49,7 +49,7 @@ function Contact(){
             
 
             
-            <div clas="col" id="form">
+            <div clas="col form" id="form">
                 <form className="contact-form" onSubmit={sendEmail}>
                 <input type="hidden" name="contact-form"/>
                 <div class="row nameBox">
@@ -77,14 +77,16 @@ function Contact(){
                 </div>
                 
                 {sub===true && (
-                        <div class="row submit">
-                        <button type="button" class="btn btn-success"><input type="submit" class="submitButon"  value="Send Message"/></button>
-                    </div>
+                        
+                        <button type="button" class="btn btn-success subButton"><input type="submit" class="submitButon"  value="Send Message"/></button>
+                    
                 )}
                 {sub===false &&(
-                        <div class="row submit">
-                        <button type="button" class="btn btn-danger">Submit</button>
-                    </div>
+                        <div class="buttonContainer">
+                                <button type="button" class="btn btn-danger subButton">Submit</button>
+                        
+                        </div>
+                        
                 )}
                 
                 </form>

@@ -30,8 +30,6 @@ function Home(){
         <>
         <div class='main'>
             
-            
-                
                 <error class="welmsg">
                 <h2> Error 404: Page not Found!</h2><br/><br/>
                 {(kid === true &&

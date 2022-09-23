@@ -15,6 +15,11 @@
   
 }
 
+.form{
+    height: 80vh;
+    width: 50vw;
+}
+
 .messageInput{
     height: 25vh;
     width: 50vw;
@@ -43,20 +48,67 @@
     background-color: green;  
 }
 
-.submit{
-    width: 10vw; 
-    border-style: dotted;   
-}
-
-input{
-    border-style: none;
-    
+.subButton{
+    width: 12vw;
+    margin-left: 23vw;
 }
 
 .error{
     height:4vh;
-    margin-bottom: 1vh;
     color: red;   
+}
+
+.buttonContainer{
+    width: 54vw;
+}
+
+@media only screen and (max-width: 1024px){
+    .subButton{
+        width: 12vw;
+        margin-left: 23vw;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .subButton{
+        width: 20vw;
+        margin-left: 17vw;
+    }
+    .contactContainer{
+        height: 82vh;
+    }
+    .error{
+        margin-bottom: 2.5vh;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    .subButton{
+        width: 22vw;
+        margin-left: 16vw;
+    }
+
+    .error{
+        margin-bottom: 4vh;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .subButton{
+        width: 27vw;
+        margin-left: 13.5vw;
+    }
+
+    .contactContainer{
+        height: 90vh;
+    }
+    
+    .error{
+        margin-bottom: 7vh;
+    }
+
+    
 }
 
 
