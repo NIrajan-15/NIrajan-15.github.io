@@ -1,5 +1,5 @@
 import React from 'react'
-import './Project.css'
+import './css/Project.css'
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import coder from './Images/coder.gif';
