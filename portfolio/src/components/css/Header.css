@@ -1,16 +1,10 @@
-
-
-
 .main_container{
-    
     height: 6vh;
     width: 100vw;
     background-color: #000000;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;
-    
-  
+    top: 0;  
 }
 
 .header_box{
@@ -23,8 +17,7 @@
     color: rgb(255, 255, 255);
     font-family: cursive;
     border-style: dotted;
-    border-color: black;
-  
+    border-color: black; 
 }
 
 .links{
@@ -32,9 +25,7 @@
 }
 
 .links:hover{
-
     color:rgb(247, 152, 152)
-
 }
 
 .links:active{
@@ -44,7 +35,6 @@
 .nav-link1,.nav-link2,.nav-link3{
     color:white;
 }
-
 
 .active{
     color:rgb(150, 91, 91);
@@ -58,8 +48,7 @@
     .header_box{
         padding-left: 10vw;
         padding-right: 10vw;
-    }
-    
+    }   
 }
 
 @media only screen and (max-width: 300px)

@@ -1,6 +1,7 @@
 import React from 'react';
-import './Footer.css';
+import './css/Footer.css';
 
+// Function that returns the footer section
 function Footer(){
     return(
 
@@ -13,4 +14,6 @@ function Footer(){
     );
 }
 
+
+// export function footer to access it in other files
 export default Footer;

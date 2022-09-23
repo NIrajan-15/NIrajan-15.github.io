@@ -11,8 +11,7 @@
     font-family: cursive;
     border-radius: 2vh;
     box-shadow: 10px 10px  rgb(175, 219, 246, 0.7);
-    margin-bottom: 5vh;
-  
+    margin-bottom: 5vh;  
 }
 
 .form{
@@ -23,10 +22,8 @@
 .messageInput{
     height: 25vh;
     width: 50vw;
-    
     text-align: center;
     border-radius: 2vh;
-
 }
 
 .top{
@@ -34,13 +31,10 @@
     height: 10vh;
     text-align: center;
     border-radius: 2vh;
-
 }
 
 .nameBox, .emailBox, .Message{
-    
-    margin-bottom: 2vh;
-    
+    margin-bottom: 2vh;    
 }
 
 .submitButton{

@@ -1,11 +1,3 @@
-
-@media only screen and(max-height: 420px)
-{
-    .container{
-        background-color: red;
-    }
-}
-
 .container {
     background-color: rgb(0,0,0);
     height: 74vh;
@@ -24,7 +16,6 @@
     text-align:center;
 }
 
-
 .name_box{
     
     width: 50vw;
@@ -33,7 +24,6 @@
     padding-top: 5vh;
     margin-left: 5vw;
     margin-bottom: 3vh;;
-  
 }
 
 .icon_box1, .icon_box2{
@@ -41,8 +31,6 @@
     color: white;
     height: 10vh;
     width: 8vw;
-    
-    
 }
 
 .icon_box1{
@@ -51,15 +39,22 @@
 
 .icon_box2{
     margin-left: 5vw;
-    
 }
-
 
 svg{
     height: 10vh;
     width: 2.5vw;
 }
 
+.Resume{
+    color: white;
+    text-align: center;   
+}
+
+.profilepic{
+    border-style: dotted;
+    width: 10vw;   
+}
 
 @media only screen and (max-width:800px)
 {
@@ -70,17 +65,15 @@ svg{
 
     .Connect_box{
         
-        width: 80vw;
-        
+        width: 80vw;    
     }
 
     .container{
         font-size: small;
     }
 
-    
     .code{
-        background-image: url('Images/coder.gif');
+        background-image: url('../Images/coder.gif');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -88,11 +81,8 @@ svg{
         height: 15vh;
         width: 3vw;
         color: white;
-        margin-left: 4vw;
-        
-    }
-
-    
+        margin-left: 4vw;   
+    }  
 }
 
 .Connect_box{
@@ -100,51 +90,42 @@ svg{
     height: 10vh;
     color: white;
     padding-top: vh;
-    padding-left: vw;
-      
+    padding-left: vw;     
 }
 
 .welcome_box{
     margin-bottom: 5vh;
     text-align: center;
     color: white;
-    font-family: cursive;
-     
+    font-family: cursive;     
 }
 
 .code{
-    
     background-repeat: no-repeat;
     background-position: auto;
     width: 4vw;
     height: 25vh;
     color: white;
     margin-left: 4vw;
-    background-image: url('./Images/coder.gif');
+    background-image: url('../Images/coder.gif');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 3vh;
-    
-}
-
-.Resume{
-    color: white;
-    text-align: center;
-    
-}
-
-.profilepic{
-    border-style: dotted;
-    width: 10vw;
-    
+    border-radius: 3vh;   
 }
 
 @media only screen and (max-width:500px )
 {
     .container{
         font-size: small;
+    }
+}
+
+@media only screen and(max-height: 420px)
+{
+    .container{
+        background-color: red;
     }
 }
 
