@@ -5,8 +5,14 @@
     height: 6vh;
     text-align: center;
     font-family: cursive;
-    padding-top: 1vh;
+    padding-top: 1.5vh;;
     
     
-    
+}
+
+@media only screen and (max-width:300px)
+{
+    .footer{
+        height: 7vh;
+    }
 }

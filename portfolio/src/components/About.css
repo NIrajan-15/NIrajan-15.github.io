@@ -1,4 +1,10 @@
 
+@media only screen and(max-height: 420px)
+{
+    .container{
+        background-color: red;
+    }
+}
 
 .container {
     background-color: rgb(0,0,0);
@@ -10,10 +16,7 @@
     justify-content: center;
     padding-top: 5vh;
     box-shadow:  5px 5px 0px  rgb(249, 173, 173);
-    border-radius: 2vh;
-    
-    
-    
+    border-radius: 2vh;   
 }
 
 .welmsg{
@@ -92,20 +95,6 @@ svg{
     
 }
 
-@media only screen and (max-width:500px )
-{
-    .container{
-        font-size: small;
-    }
-}
-
-@media only screen and (max-width: 375px)
-{
-    .container{
-        font-size: smaller;
-    }
-}
-
 .Connect_box{
     width:40vw;
     height: 10vh;
@@ -151,4 +140,12 @@ svg{
     width: 10vw;
     
 }
+
+@media only screen and (max-width:500px )
+{
+    .container{
+        font-size: small;
+    }
+}
+
 
