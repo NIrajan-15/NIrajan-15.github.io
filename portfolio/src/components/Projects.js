@@ -1,37 +1,44 @@
 import React from 'react'
 import './css/Project.css'
-import Carousel from 'react-gallery-carousel';
+
 import 'react-gallery-carousel/dist/index.css';
-import coder from './Images/coder.gif';
-import bg from './Images/bgimg.jpg';
+import coder from './Images/bgimage.png';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import {Carousel} from 'react-responsive-carousel';
 
 
-
+// Projects 
 const projects = [
+
     {
-        "id":1,
-        "name":"TO-DO",
-        "image_url":"./Images/project1",
-        "descriptioin":"A simple to-do application with CURD functionality created to learn Django.",
-        "tools_used": ['Django','Bootstrap','HTML','CSS','sqlite3']
+        "id":3,
+        "name":"Blue Collar ",
+        "image_url":"./Images/project2",
+        "descriptioin":"A Web Application to find and post blue collar Jobs.",
+
+        "tools_used": [' Django, ', ' PostgreSQL, ', ' HTML, ', ' CSS, ',  ' Bootstrap ']
     },
+
+    
     {
         "id":2,
         "name":"ACM ULM Website",
         "image_url":"./Images/project2",
         "descriptioin":"A full-stack website for University of Louisiana Monroe's ACM Chapter. I personally worked on backend part.",
-        "tools_used": ['Django','PostgreSQL','AWS ECS','Docker','AWS S3']
+        "tools_used": [' Django, ',' PostgreSQL, ',' AWS ECS, ',' S3, ',' Docker, ']
     },
-    {
-        "id":3,
-        "name":"Convenient ",
-        "image_url":"./Images/project2",
-        "descriptioin":"A Web Application to order products from nearby convenience stores.",
 
-        "tools_used": ['Django','PostgreSQL','AWS ECS','Docker','AWS S3']
-    }
+    {
+        "id":1,
+        "name":"TO-DO",
+        "image_url":"./Images/project1",
+        "descriptioin":"A simple to-do application with CURD functionality created to learn Django.",
+        "tools_used": ['Django, ','Bootstrap, ','HTML, ','CSS, ','sqlite3']
+    },
+    
 ]
 
+// Function that returns projects section
 function Projects(){
 
     
@@ -43,7 +50,7 @@ function Projects(){
 
         <div class="projectCol">
         
-            
+            {/* Map projects in below format */}
             {projects.map(project => {
                 return (
                 
@@ -51,14 +58,19 @@ function Projects(){
                     <br></br>
                     <div class="row topBox">
                         <div class="col imageBox">
-                            <Carousel>
-                                
-                                    <img src={coder} alt="images"/>
-                                
-                                
-                                    <img src={bg} alt="a"/>
-                                
-                                    <img src="./Images/coder.gif" alt="i"/>
+                            {/* Carousel with arrow and no status and thumbnail */}
+                            <Carousel showArrows={true} showStatus={false} showThumbs={false} >
+
+                                    <div>
+                                        <img src={coder} alt="images" />
+                                    </div>
+                                    <div>
+                                        <img src={coder} alt="images"/>
+                                    </div>
+                                    <div>
+                                        <img src={coder} alt="images"/>
+                                    </div>
+            
                                 
                             </Carousel>
                         </div>
@@ -68,7 +80,9 @@ function Projects(){
                           {project.descriptioin}
                           
                           <div class="toolsBox">
-                            Tools :  Django, HTML, CSS, sqlite3
+                            
+                            <b>Tools: {project.tools_used}</b>
+                            
                          </div>  
                         </div>
                         <div class="maindesp">

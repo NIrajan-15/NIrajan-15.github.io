@@ -10,7 +10,7 @@
     color: white;
     font-family: cursive;
     border-radius: 2vh;
-    box-shadow: 10px 10px  rgb(175, 219, 246, 0.7);
+    box-shadow: 5px 5px 0px  rgb(175, 219, 246);
     margin-bottom: 5vh;  
 }
 
@@ -34,7 +34,8 @@
 }
 
 .nameBox, .emailBox, .Message{
-    margin-bottom: 2vh;    
+    margin-bottom: 2vh; 
+       
 }
 
 .submitButton{
@@ -56,20 +57,25 @@
     width: 54vw;
 }
 
-@media only screen and (max-width: 1024px){
+/* For screen with width smaller than 1024px */
+@media only screen and (max-width: 1025px){
     .subButton{
         width: 12vw;
         margin-left: 23vw;
     }
+    .contactContainer{
+        height: 82vh;
+    }
 }
 
+/* For screen with width smaller than 700px */
 @media only screen and (max-width: 700px){
     .subButton{
         width: 20vw;
         margin-left: 17vw;
     }
     .contactContainer{
-        height: 82vh;
+        height: 80vh;
     }
     .error{
         margin-bottom: 2.5vh;
@@ -77,10 +83,15 @@
 
 }
 
+/* For screen with width smaller than 450px */
 @media only screen and (max-width: 450px){
     .subButton{
         width: 22vw;
         margin-left: 16vw;
+    }
+
+    .contactContainer{
+        height: 80vh;
     }
 
     .error{
@@ -88,6 +99,7 @@
     }
 }
 
+/* For screen with width smaller than 300px */
 @media only screen and (max-width: 300px){
     .subButton{
         width: 27vw;
@@ -102,11 +114,29 @@
         margin-bottom: 7vh;
     }
 
+}
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .contactContainer{
+        height: 100vh;
+    }
     
 }
 
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .contactContainer{
+        height: 115vh;
+    }
 
-
+    .error{
+        margin-bottom: 4vh;
+    }
+    
+}
 
 
 

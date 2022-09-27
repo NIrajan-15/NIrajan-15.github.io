@@ -3,30 +3,31 @@ import './css/Header.css';
 import {Link} from 'react-router-dom';
 
 
-// Function to return the header section of the website
+// Function to return the header section of the website.
 function Header(){
 
-    // declaring state variable active with initial state 1
-    // active variable indicates the active tab of the website with 1 - About, 2 - Projects, 3 - Contact
+    // declaring state variable active with initial state 1.
+    // active variable indicates the active tab of the website with 1 - About, 2 - Projects, 3 - Contact.
     const[active,setActive] = useState(1);
 
-    // ahndle
+    // fucntions to set tab 1,2, and 3 on clicking on the respective tab.
     const handleClick1 = () => setActive(1);
     const handleClick2 = () => setActive(2);
     const handleClick3 = () => setActive(3);
 
 
-    // effect hook to set active tabs color to blue and other tabs to white
+    // effect hook to set active tabs color to blue and other tabs to white.
     useEffect(() => {
         
-            // looping from 1 through 4 to set and reset active tabs
+            // looping from 1 through 4 to set and reset active tabs.
             for(let i=1;i<4;i++)
             {
-                // set the active tab color to blue and non-active tab colors to default
+                // set the active tab color to blue.
                 if(active===i)
                 {
                     document.getElementById("nav-link"+i.toString()).style.color = " rgb(0, 175, 202)";
                 }
+                // set non-active tab colors to white.
                 else{
                     document.getElementById("nav-link"+i.toString()).style.color = "white";
                 }

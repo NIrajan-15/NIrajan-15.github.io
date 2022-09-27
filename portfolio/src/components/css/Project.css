@@ -1,13 +1,16 @@
 .projCol{
     width: 60vw;
-    padding: 5vh;         
+    padding: 5vh;
+            
 }
 
 .projectContainer{
     padding-left: 20vw;
-    padding-top: 5vh;
     padding-bottom: 5vh;
-    padding-right: 5vw;   
+    padding-right: 5vw;
+    padding-top: 10vh;
+    padding-top: 2vh;
+    overflow: hidden; 
 }
 
 .projRow{
@@ -17,7 +20,7 @@
     background-color: black;
     color: white;
     margin-top: 3vh;
-    box-shadow: 10px 10px  rgb(175, 219, 246);
+    box-shadow: 5px 5px 0px  rgb(188, 215, 248);
     border-radius: 2vh;
     font-family: cursive;
 }
@@ -29,11 +32,11 @@
     padding-right: 2vw;       
 }
 
-.imageBox,img{
+.imageBox{
+    width: 8vw;
+    color:rgb(175, 219, 246);
     
-    height: 55vh;
-    width: 10vw;
-    color:rgb(175, 219, 246);      
+    
 }
 
 .imageBox,.despBox{
@@ -48,9 +51,16 @@
 }
 
 .toolsBox{
-    padding-top: 5vh;    
+    padding-top: 3vh;    
 }
 
+img{
+    height: 55vh;
+    
+}
+
+
+/* For screen with width smaller than 1500px */
 @media only screen and (max-width:1500px)
 {
     .projCol{
@@ -78,6 +88,7 @@
     }
 }
 
+/* For screen with width smaller than 853px */
 @media only screen and (max-width: 853px){
     .projRow{
         padding-left: 3vw;
@@ -100,17 +111,21 @@
         width: 20vw;
         height: 40vh;
         border-style: dotted();
-        margin-left: -1.5vw;    
+        margin-left: -1.5vw; 
+        z-index: 1;   
     }
+
     .imageBox{
         padding-top: -2vh;
     }
     .projectContainer{
-        padding-top: 0.5vh;
+       padding-top: 0.5vh;
     }
 
 }
 
+
+/* For screen with width smaller than 450px */
 @media only screen and (max-width:450px){
     .projRow{
         padding-left: 3.5vw;
@@ -124,12 +139,13 @@
     }
 }
 
+/* For screen with width smaller than 376px */
 @media only screen and (max-width: 376px){
 
     .projRow{
         width: 80vw;
         margin-right: 10vw;
-        height: 90vh;
+        height: 83vh;
         margin-left: -1vw; 
         margin-top: 5vh;   
     }
@@ -138,6 +154,35 @@
     }
   
 }
+
+/* For screen with width smaller than 300px */
+@media only screen and (max-width: 300px){
+
+    .projRow{
+        height: 95vh;     
+    }
+   
+  
+}
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .projRow{
+        height: 100vh;
+    }
+}
+
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .projRow{
+        height: 120vh;
+    }
+}
+
+
+
 
 
 
