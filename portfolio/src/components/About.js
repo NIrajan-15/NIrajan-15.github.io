@@ -1,8 +1,9 @@
 import React from 'react';
 import './css/About.css';
 import './Images/coder.gif'
-import './Images/Resume.pdf'
+import Resume from './Images/Resume.pdf'
 import './css/Header.css'
+
 
 
 // Function that returns the about section of the website
@@ -31,7 +32,7 @@ function About(){
                     <h4> I'm a Developer. </h4>
                     <br/><br/>
                     
-                <h4>Feel Free to Checkout my <a href="Images/Resume.pdf" download>Resume</a> .</h4>
+                <h4>Feel Free to Checkout my <a href={Resume} target='_blank' rel='noopener noreferrer'>Resume</a> .</h4>
                     
                 {/* Github and linked In logo section */}
                 <div class="Connect_box row">

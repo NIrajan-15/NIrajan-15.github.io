@@ -1,11 +1,9 @@
 .container {
     background-color: rgb(0,0,0);
     height: 74vh;
-    width: 100vw;
+    width: 40vw;
     margin-top: 7vh;
     margin-bottom: 7vh;
-    align-items: center;
-    justify-content: center;
     padding-top: 5vh;
     box-shadow:  5px 5px 0px  rgb(249, 173, 173);
     border-radius: 2vh;   
@@ -56,35 +54,6 @@ svg{
     width: 10vw;   
 }
 
-@media only screen and (max-width:800px)
-{
-    svg{
-        height: 10vh;
-        width: 5vw;
-    }
-
-    .Connect_box{
-        
-        width: 80vw;    
-    }
-
-    .container{
-        font-size: small;
-    }
-
-    .code{
-        background-image: url('../Images/coder.gif');
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 15vh;
-        width: 3vw;
-        color: white;
-        margin-left: 4vw;   
-    }  
-}
-
 .Connect_box{
     width:40vw;
     height: 10vh;
@@ -115,18 +84,67 @@ svg{
     border-radius: 3vh;   
 }
 
+/* For screen with width smaller than 800px */
+@media only screen and (max-width:800px)
+{
+    svg{
+        height: 10vh;
+        width: 5vw;
+    }
+
+    .Connect_box{
+        
+        width: 80vw;    
+    }
+
+    .container{
+        font-size: small;
+    }
+
+    .code{
+        background-image: url('../Images/coder.gif');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 15vh;
+        width: 3vw;
+        color: white;
+        margin-left: 4vw;   
+    }  
+}
+
+/* For screen with width smaller than 500px */
 @media only screen and (max-width:500px )
 {
     .container{
         font-size: small;
+        height: 80vh;
+        
+        
     }
 }
 
-@media only screen and(max-height: 420px)
+/* For screen with width smaller than 300px */
+@media only screen and (max-width:300px)
 {
     .container{
-        background-color: red;
+        height: 71vh;
     }
 }
 
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .container{
+        height: 92vh;
+    }
+}
 
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .container{
+        height: 110vh;
+    }
+}

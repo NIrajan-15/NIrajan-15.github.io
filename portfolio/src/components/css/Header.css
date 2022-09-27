@@ -4,7 +4,8 @@
     background-color: #000000;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;  
+    top: 0; 
+    z-index: 2; 
 }
 
 .header_box{
@@ -16,8 +17,6 @@
     padding-right: 20vw;
     color: rgb(255, 255, 255);
     font-family: cursive;
-    border-style: dotted;
-    border-color: black; 
 }
 
 .links{
@@ -34,6 +33,7 @@
 
 .nav-link1,.nav-link2,.nav-link3{
     color:white;
+    text-decoration: none;
 }
 
 .active{
@@ -42,8 +42,10 @@
 
 .passive{
     color: white;
+    text-decoration: none;
 }
 
+/* For screen with width smaller than 400px */
 @media only screen and (max-width:400px){
     .header_box{
         padding-left: 10vw;
@@ -51,11 +53,28 @@
     }   
 }
 
+/* For screen with width smaller than 300px */
 @media only screen and (max-width: 300px)
 {
     .header_box{
         padding-left: 0vw;
         padding-right: 0vw;
+    }
+}
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .main_container{
+        height: 10vh;
+    }
+}
+
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .main_container{
+        height: 12vh;
     }
 }
 

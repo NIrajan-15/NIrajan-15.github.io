@@ -5,12 +5,32 @@
     height: 6vh;
     text-align: center;
     font-family: cursive;
-    padding-top: 1.5vh;;   
+    padding-top: 1.5vh;
+     
 }
 
+/* For screen with width smaller than 300px */
 @media only screen and (max-width:300px)
 {
     .footer{
-        height: 7vh;
+        height: 9vh;
     }
 }
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .footer{
+        height: 10vh;
+    }
+}
+
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .footer{
+        height: 12vh;
+    }
+}
+
+
