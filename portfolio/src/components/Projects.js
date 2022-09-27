@@ -46,7 +46,7 @@ function Projects(){
     return(
         <>
         
-        <div class="projectContainer">
+        <div class="Container">
 
         <div class="projectCol">
         
