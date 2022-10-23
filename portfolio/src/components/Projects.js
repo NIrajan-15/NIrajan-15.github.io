@@ -8,24 +8,24 @@ import {Carousel} from 'react-responsive-carousel';
 
 
 // Projects 
-const projects = [
+export const projects = [
 
     {
         "id":3,
         "name":"Blue Collar ",
-        "image_url":"./Images/project2",
+        "image_url":coder,
         "descriptioin":"A Web Application to find and post blue collar Jobs.",
 
-        "tools_used": [' Django, ', ' PostgreSQL, ', ' HTML, ', ' CSS, ',  ' Bootstrap ']
+        "tools_used": ['Django, ', 'Bootstrap, ', 'PostgreSQL, ', 'HTML, ',  'CSS']
     },
 
     
     {
         "id":2,
         "name":"ACM ULM Website",
-        "image_url":"./Images/project2",
+        "image":"./Images/bgimage.png",
         "descriptioin":"A full-stack website for University of Louisiana Monroe's ACM Chapter. I personally worked on backend part.",
-        "tools_used": [' Django, ',' PostgreSQL, ',' AWS ECS, ',' S3, ',' Docker, ']
+        "tools_used": ['Django, ','S3, ','PostgreSQL']
     },
 
     {
@@ -62,7 +62,7 @@ function Projects(){
                             <Carousel showArrows={true} showStatus={false} showThumbs={false} >
 
                                     <div>
-                                        <img src={coder} alt="images" />
+                                        <img src={project.image} alt="images" />
                                     </div>
                                     <div>
                                         <img src={coder} alt="images"/>
