@@ -7,7 +7,7 @@ import validator from 'validator';
 function Contact(){
 
     // Declare state variable "error" with initail value false
-    const[error, setError] = useState(false)
+    const[error, setError] = useState(null)
     
     
     // Function to validate the email using validator package
@@ -18,21 +18,18 @@ function Contact(){
     let email = e.target.value    
 
         // if email in invalid then error and sub are set to false
-        if(!(validator.isEmail(email))){
-            setError(true)
+        if((validator.isEmail(email))){
+            setError(false)
             
         } 
         else{
-            setError(false)    
+            setError(true)    
         }   
     }
 
     // Effect hook to hide fake submit button if email is incorrect
     useEffect(()=> {
-        if(error===true)
-        {
-            document.getElementById("fake-button").style.opacity = "0"; // set opacity to 0 if email is incorrect
-        }
+        
     },[error])
 
     // Function to send email to nirajan according to template setup on emailjs
@@ -40,9 +37,9 @@ function Contact(){
         
         //to cancel once changes is made on email field  
         e.preventDefault();
-        console.log(process.env.REACT_APP_SERVICE_ID)
+
         // send from to emailjs 
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_PUBLIC_KEY)
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
         .then((result) => {
 
             window.alert("message sent")
@@ -92,17 +89,18 @@ function Contact(){
                     <input type="text" class="messageInput" name="message" required></input>
                 </div>
 
-                {error===true &&(
+                {error===false &&(
                     <div>
-                        <button class="btn-btn danger">Submit</button>
+                    <button class="btn btn-danger subButton">Submit</button>
                     </div>
                 )}
-                <div>
-                <button class="btn btn-danger subButton">Submit</button>
-                </div>
-                
-                       
+                      
                 </form>
+                {(error===null|| error===true )&&(
+                    <div>
+                    <button class="btn btn-danger subButton">Submit</button>
+                    </div>
+                )}
 
             </div> 
                    
