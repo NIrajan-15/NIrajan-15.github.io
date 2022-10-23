@@ -10,8 +10,8 @@ import './css/Header.css'
 function About(){
 
     return(
-
-    <div class="container">
+        <body>
+    <div class="container1">
         
         <div class="row welcome_box">
                 
@@ -60,7 +60,7 @@ function About(){
             </div>    
         </div>             
     </div>
-               
+    </body>           
 );
 
 }

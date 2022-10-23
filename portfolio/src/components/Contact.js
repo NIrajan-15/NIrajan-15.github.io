@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import "./css/Contact.css"
 import validator from 'validator';
@@ -8,6 +8,7 @@ function Contact(){
 
     // Declare state variable "error" with initail value false
     const[error, setError] = useState(false)
+    
     
     // Function to validate the email using validator package
     const valildateEmail = (e) =>{
@@ -19,24 +20,33 @@ function Contact(){
         // if email in invalid then error and sub are set to false
         if(!(validator.isEmail(email))){
             setError(true)
+            
         } 
         else{
             setError(false)    
-        }    
+        }   
     }
 
     // Effect hook to hide fake submit button if email is incorrect
-    
+    useEffect(()=> {
+        if(error===true)
+        {
+            document.getElementById("fake-button").style.opacity = "0"; // set opacity to 0 if email is incorrect
+        }
+    },[error])
 
     // Function to send email to nirajan according to template setup on emailjs
     const sendEmail = (e) => {
         
         //to cancel once changes is made on email field  
         e.preventDefault();
-
+        console.log(process.env.REACT_APP_SERVICE_ID)
         // send from to emailjs 
-        emailjs.sendForm('service_8nh9s5f','template_mibfd6s', e.target, 'TTwPNGNMykYNtWO5C')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_PUBLIC_KEY)
         .then((result) => {
+
+            window.alert("message sent")
+            window.location.reload()
           
         // if error occurs then Error message is displayed
         },(error) => {
@@ -82,7 +92,11 @@ function Contact(){
                     <input type="text" class="messageInput" name="message" required></input>
                 </div>
 
-                
+                {error===true &&(
+                    <div>
+                        <button class="btn-btn danger">Submit</button>
+                    </div>
+                )}
                 <div>
                 <button class="btn btn-danger subButton">Submit</button>
                 </div>

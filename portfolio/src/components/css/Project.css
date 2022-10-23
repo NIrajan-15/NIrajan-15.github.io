@@ -1,16 +1,20 @@
+
+body{
+    overflow-x: hidden;
+}
+
 .projCol{
     width: 60vw;
     padding: 5vh;
             
 }
 
-.projectContainer{
+.Container{
     padding-left: 20vw;
     padding-bottom: 5vh;
-    padding-right: 5vw;
     padding-top: 10vh;
     padding-top: 2vh;
-    overflow: hidden; 
+    overflow-x: hidden; 
 }
 
 .projRow{
@@ -80,7 +84,8 @@ img{
         height: 55vh;
         width: 80vw;
         margin: double;
-        padding-top: 1vh;   
+        padding-top: 1vh;
+        margin-left: -10vw;   
     }
 
     .imageBox,img{
@@ -96,6 +101,7 @@ img{
         margin-top: 1vh;
         font-size: smaller;
         margin-top: 3vh;
+        
     }
 
     .despBox{
@@ -121,6 +127,7 @@ img{
     .projectContainer{
        padding-top: 0.5vh;
     }
+    
 
 }
 
@@ -131,6 +138,7 @@ img{
         padding-left: 3.5vw;
         height: 75vh;
         margin-top: 3vh;
+        
     }
 
     .projectContainer{
@@ -146,7 +154,6 @@ img{
         width: 80vw;
         margin-right: 10vw;
         height: 83vh;
-        margin-left: -1vw; 
         margin-top: 5vh;   
     }
     .projectContainer{
