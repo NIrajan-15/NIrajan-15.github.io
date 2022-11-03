@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/css/main.8d4d91bc.css",
-    "main.js": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/js/main.d9503047.js",
-    "static/js/787.1ed0c42c.chunk.js": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js",
-    "static/media/acm1.png": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/acm1.1f2e20b0aa090b8a6989.png",
-    "static/media/acm3.png": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/acm3.2275a00bff6043acbe6f.png",
-    "static/media/blue1.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/blue1.0b62969108e3c1fa504e.PNG",
-    "static/media/blue2.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/blue2.858d2e7f1fc6cb00964c.PNG",
-    "static/media/blue3.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/blue3.3af8188811cd3bef0fcd.PNG",
-    "static/media/Resume.pdf": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/Resume.8f381d9b51aef560737c.pdf",
-    "static/media/acm2.png": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/acm2.8de2fa7ed0ee802b9629.png",
-    "static/media/todo3.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/todo3.9a32e67815cad7665399.PNG",
-    "static/media/todo2.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/todo2.d60284e50b440df1aba5.PNG",
-    "static/media/todoa.PNG": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/todoa.d84514309b5ac83f3cbe.PNG",
-    "static/media/coder.gif": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/media/coder.5f9a876ef08303441b5a.gif",
-    "index.html": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/index.html",
-    "main.8d4d91bc.css.map": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/css/main.8d4d91bc.css.map",
-    "main.d9503047.js.map": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/js/main.d9503047.js.map",
-    "787.1ed0c42c.chunk.js.map": "/http//:NIrajan-15.github.io/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/Nirajan-Sangraula/static/css/main.72d46d14.css",
+    "main.js": "/Nirajan-Sangraula/static/js/main.4cd0bffa.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js",
+    "static/media/acm1.png": "/Nirajan-Sangraula/static/media/acm1.1f2e20b0aa090b8a6989.png",
+    "static/media/acm3.png": "/Nirajan-Sangraula/static/media/acm3.2275a00bff6043acbe6f.png",
+    "static/media/blue1.PNG": "/Nirajan-Sangraula/static/media/blue1.0b62969108e3c1fa504e.PNG",
+    "static/media/blue2.PNG": "/Nirajan-Sangraula/static/media/blue2.858d2e7f1fc6cb00964c.PNG",
+    "static/media/blue3.PNG": "/Nirajan-Sangraula/static/media/blue3.3af8188811cd3bef0fcd.PNG",
+    "static/media/Resume.pdf": "/Nirajan-Sangraula/static/media/Resume.8f381d9b51aef560737c.pdf",
+    "static/media/acm2.png": "/Nirajan-Sangraula/static/media/acm2.8de2fa7ed0ee802b9629.png",
+    "static/media/todo3.PNG": "/Nirajan-Sangraula/static/media/todo3.9a32e67815cad7665399.PNG",
+    "static/media/todo2.PNG": "/Nirajan-Sangraula/static/media/todo2.d60284e50b440df1aba5.PNG",
+    "static/media/todoa.PNG": "/Nirajan-Sangraula/static/media/todoa.d84514309b5ac83f3cbe.PNG",
+    "static/media/coder.gif": "/Nirajan-Sangraula/static/media/coder.5f9a876ef08303441b5a.gif",
+    "index.html": "/Nirajan-Sangraula/index.html",
+    "main.72d46d14.css.map": "/Nirajan-Sangraula/static/css/main.72d46d14.css.map",
+    "main.4cd0bffa.js.map": "/Nirajan-Sangraula/static/js/main.4cd0bffa.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d4d91bc.css",
-    "static/js/main.d9503047.js"
+    "static/css/main.72d46d14.css",
+    "static/js/main.4cd0bffa.js"
   ]
 }
