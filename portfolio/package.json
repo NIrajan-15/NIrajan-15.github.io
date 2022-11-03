@@ -1,5 +1,5 @@
 {
-  "homepage": "https:NIrajan-15.github.io/Nirajan-Sangraula",
+  "homepage": "https//:NIrajan-15/NIrajan-15.github.io/Nirajan-Sangraula",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -8,9 +8,16 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.1",
+    "emailjs-com": "^3.2.0",
+    "pure-react-carousel": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-gallery-carousel": "^0.2.10",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "validator": "^13.7.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

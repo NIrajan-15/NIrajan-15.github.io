@@ -1,0 +1,17 @@
+.main{
+    padding-top: 35vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+.welmsg{
+    height: 30vh;
+    background-color: black;
+    color: white;
+    text-align: center;;
+}
+

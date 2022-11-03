@@ -1,0 +1,145 @@
+.contactContainer{
+    padding-top: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: rgb(0, 0, 0);
+    margin-top: 3vh;
+    height: 80vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: white;
+    font-family: cursive;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 0px  rgb(175, 219, 246);
+    margin-bottom: 5vh;  
+}
+
+.form{
+    height: 80vh;
+    width: 50vw;
+    font-family: cursive;
+}
+
+.messageInput{
+    height: 25vh;
+    width: 50vw;
+    text-align: center;
+    border-radius: 2vh;
+}
+
+.top{
+    width: 50vw;
+    height: 10vh;
+    text-align: center;
+    border-radius: 2vh;
+}
+
+.nameBox, .emailBox, .Message{
+    margin-bottom: 2vh; 
+       
+}
+
+.submitButton{
+    color: green; 
+    background-color: green;  
+}
+
+.subButton{
+    width: 12vw;
+    margin-left: 23vw;
+}
+
+.error{
+    height:4vh;
+    color: red;   
+}
+
+.buttonContainer{
+    width: 54vw;
+}
+
+/* For screen with width smaller than 1024px */
+@media only screen and (max-width: 1025px){
+    .subButton{
+        width: 12vw;
+        margin-left: 23vw;
+    }
+    .contactContainer{
+        height: 82vh;
+    }
+}
+
+/* For screen with width smaller than 700px */
+@media only screen and (max-width: 700px){
+    .subButton{
+        width: 20vw;
+        margin-left: 17vw;
+    }
+    .contactContainer{
+        height: 80vh;
+    }
+    .error{
+        margin-bottom: 2.5vh;
+    }
+
+}
+
+/* For screen with width smaller than 450px */
+@media only screen and (max-width: 450px){
+    .subButton{
+        width: 22vw;
+        margin-left: 16vw;
+    }
+
+    .contactContainer{
+        height: 80vh;
+        font-family: comic sans MS;
+    }
+
+    .error{
+        margin-bottom: 4vh;
+    }
+}
+
+/* For screen with width smaller than 300px */
+@media only screen and (max-width: 300px){
+    .subButton{
+        width: 27vw;
+        margin-left: 13.5vw;
+    }
+
+    .contactContainer{
+        height: 90vh;
+    }
+    
+    .error{
+        margin-bottom: 7vh;
+    }
+
+}
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .contactContainer{
+        height: 100vh;
+    }
+    
+}
+
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .contactContainer{
+        height: 115vh;
+    }
+
+    .error{
+        margin-bottom: 4vh;
+    }
+    
+}
+
+
+
+

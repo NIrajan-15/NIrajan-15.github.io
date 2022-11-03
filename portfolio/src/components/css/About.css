@@ -1,0 +1,158 @@
+.body{
+    overflow:hidden;
+}
+
+
+.container1{
+    background-color: rgb(0,0,0);
+    height: 74vh;
+    width: 86vw;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    padding-top: 5vh;
+    box-shadow:  5px 5px 0px  rgb(249, 173, 173);
+    border-radius: 2vh;
+    overflow: hidden;   
+}
+
+.welmsg{
+    color:white;
+    text-align:center;
+}
+
+.name_box{
+    
+    width: 50vw;
+    color: white;
+    font-family: cursive;
+    padding-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 3vh;;
+}
+
+.icon_box1, .icon_box2{
+  
+    color: white;
+    height: 10vh;
+    width: 8vw;
+}
+
+.icon_box1{
+    text-align: left;
+}
+
+.icon_box2{
+    margin-left: 5vw;
+}
+
+svg{
+    height: 10vh;
+    width: 2.5vw;
+}
+
+.Resume{
+    color: white;
+    text-align: center;   
+}
+
+.profilepic{
+    border-style: dotted;
+    width: 10vw;   
+}
+
+.Connect_box{
+    width:40vw;
+    height: 10vh;
+    color: white;
+      
+}
+
+.welcome_box{
+    margin-bottom: 5vh;
+    text-align: center;
+    color: white;
+    font-family: cursive;     
+}
+
+.code{
+    background-repeat: no-repeat;
+    background-position: auto;
+    width: 4vw;
+    height: 25vh;
+    color: white;
+    margin-left: 4vw;
+    background-image: url('../Images/coder.gif');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 3vh;   
+}
+
+/* For screen with width smaller than 800px */
+@media only screen and (max-width:800px)
+{
+    svg{
+        height: 10vh;
+        width: 5vw;
+    }
+
+    .Connect_box{
+        
+        width: 80vw;    
+    }
+
+    .container1{
+        font-size: small;
+    }
+
+    .code{
+        background-image: url('../Images/coder.gif');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 15vh;
+        width: 3vw;
+        color: white;
+        margin-left: 4vw;   
+    }  
+}
+
+/* For screen with width smaller than 500px */
+@media only screen and (max-width:500px )
+{
+    .container1{
+        font-size: small;
+       
+        
+    }
+}
+
+
+/* For screen with width smaller than 300px */
+@media only screen and (max-width:300px)
+{
+    .container1{
+        height: 71vh;
+    }
+}
+
+/* For screen with height smaller than 420px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 420px), only screen and(orientation:landscape)
+{
+    .container1{
+        height: 92vh;
+        
+    }
+}
+
+/* For screen with height smaller than 300px and the screeon should be in landscape mode. i.e. primarily for mobile phone in ladscape mode*/
+@media only screen and (max-height: 300px), only screen and(orientation:landscape)
+{
+    .container1{
+        height: 110vh;
+    }
+}
