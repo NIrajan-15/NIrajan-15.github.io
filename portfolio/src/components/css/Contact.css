@@ -17,6 +17,7 @@
 .form{
     height: 80vh;
     width: 50vw;
+    font-family: cursive;
 }
 
 .messageInput{
@@ -92,6 +93,7 @@
 
     .contactContainer{
         height: 80vh;
+        font-family: comic sans MS;
     }
 
     .error{

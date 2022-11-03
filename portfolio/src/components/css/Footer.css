@@ -9,6 +9,13 @@
      
 }
 
+@media only screen and(max-width:450px)
+{
+    .footer{
+        font-family: comic sans MS;
+    }
+}
+
 /* For screen with width smaller than 300px */
 @media only screen and (max-width:300px)
 {

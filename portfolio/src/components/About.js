@@ -27,7 +27,7 @@ function About(){
             <div class="col-8 name_box">
                     
                     Hi, I'm
-                    <h1> Nirajan Sangarula </h1>
+                    <h1> Nirajan Sangarula. </h1>
                     <br/>
                     <h4> I'm a Developer. </h4>
                     <br/><br/>
