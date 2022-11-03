@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import {Route, Switch, BrowserRouter as Router} from 'react-router-dom'
+import BrowserRouter  from 'react-router-dom/BrowserRouter'
+import {Route, Switch} from 'react-router-dom'
 import Header from './components/Header';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
     <div className='App'>
-    <Router>
+    <BrowserRouter>
       
 
       
@@ -33,7 +34,7 @@ function App() {
             
             
           
-    </Router>
+    </BrowserRouter>
     </div>
     
     </>
