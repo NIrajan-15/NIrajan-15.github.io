@@ -1,7 +1,8 @@
 {
-  "homepage": "https//:NIrajan-15/NIrajan-15.github.io/Nirajan-Sangraula",
+  
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "http//:NIrajan-15/NIrajan-15.github.io/Nirajan-Sangraula",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
