@@ -23,7 +23,7 @@ export const projects = [
     {
         "id":3,
         "name":"Blue Collar ",
-        "descriptioin":"A Web Application to find and post blue collar Jobs.",
+        "descriptioin":"An easy-to-use web application to find or create blue-collar jobs in a few steps.",
         'images' : [blue1,blue2,blue3],
         "tools_used": ['Django,', ' PostgreSQL,', ' HTML,', ' Bootstrap,',  ' CSS'],
         'source_code':"https://github.com/NIrajan-15/Blue-Collar",
@@ -34,7 +34,7 @@ export const projects = [
         "id":2,
         "name":"ACM ULM Website",
         
-        "descriptioin":"A full-stack website for University of Louisiana Monroe's ACM Chapter. I personally worked on backend part.",
+        "descriptioin":"A full-stack website for the University of Louisiana Monroe's ACM Chapter. I worked on a backend part.",
         'images' : [acma,acmc,acmb],
         "tools_used": ['Django, ','S3, ','PostgreSQL'],
         'source_code': '',
@@ -43,7 +43,7 @@ export const projects = [
     {
         "id":1,
         "name":"TO-DO",
-        "descriptioin":"A simple to-do application with CURD functionality created to learn Django.",
+        "descriptioin":"A simple web application with CURD functionality to track your to-do.",
         'images' : [todoa,todob,todoc],
         "tools_used": ['Django, ','Bootstrap, ','HTML, ','CSS, ','sqlite3'],
         'source_code':'https://github.com/NIrajan-15/To-do',
