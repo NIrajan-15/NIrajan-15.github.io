@@ -23,14 +23,14 @@ function Home(){
         
         setEnter(true)
 
-
-        // if the state variable enter is true redirect to path "/about/"
-        if(enter===true){
-
-            return <Redirect to="/about"/>
-        }
       
     },[enter],[kidMsg]);
+
+    // if the state variable enter is true redirect to path "/about/"
+    if(enter===true){
+
+        return <Redirect to="/about"/>
+    }
 
     
 
