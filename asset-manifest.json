@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Nirajan-Sangraula/static/css/main.72d46d14.css",
-    "main.js": "/Nirajan-Sangraula/static/js/main.49341bcb.js",
+    "main.js": "/Nirajan-Sangraula/static/js/main.e78f3301.js",
     "static/js/787.1ed0c42c.chunk.js": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js",
     "static/media/acm1.png": "/Nirajan-Sangraula/static/media/acm1.1f2e20b0aa090b8a6989.png",
     "static/media/acm3.png": "/Nirajan-Sangraula/static/media/acm3.2275a00bff6043acbe6f.png",
@@ -16,11 +16,11 @@
     "static/media/coder.gif": "/Nirajan-Sangraula/static/media/coder.5f9a876ef08303441b5a.gif",
     "index.html": "/Nirajan-Sangraula/index.html",
     "main.72d46d14.css.map": "/Nirajan-Sangraula/static/css/main.72d46d14.css.map",
-    "main.49341bcb.js.map": "/Nirajan-Sangraula/static/js/main.49341bcb.js.map",
+    "main.e78f3301.js.map": "/Nirajan-Sangraula/static/js/main.e78f3301.js.map",
     "787.1ed0c42c.chunk.js.map": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72d46d14.css",
-    "static/js/main.49341bcb.js"
+    "static/js/main.e78f3301.js"
   ]
 }
