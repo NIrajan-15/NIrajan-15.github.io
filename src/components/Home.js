@@ -1,3 +1,4 @@
+import { clear } from '@testing-library/user-event/dist/clear';
 import React,{useEffect,useState} from 'react';
 import { Redirect } from 'react-router';
 import './css/Home.css'
@@ -14,10 +15,14 @@ function Home(){
     useEffect(() => {
 
         // set timeout function to set enter to true which redirects to about page 1500ms after component loads.
-        setTimeout(() => setEnter(true), 1500);
+        const enterTimer = setTimeout(() => setEnter(true), 1500);
         
         //set timeour function to set kidmsg to true which loads "just kidding" messsage 500ms after component loads.
-        setTimeout(()=>setKidMsg(true),500);
+        const kidTimer = setTimeout(()=>setKidMsg(true),500);
+
+        clearTimeout(enterTimer)
+        clearTimeout(kidTimer)
+
 
         // if the state variable enter is true redirect to path "/about/"
         if(enter===true){
