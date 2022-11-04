@@ -24,17 +24,17 @@ function Home(){
             clearTimeout(kidTimer);
             clearTimeout(enterTimer);
 
-            if(enter===true){
-
-                return <Redirect to="/about"/>
-            }
+            
         }
         
-    },[enter],[kidMsg]);
+    },[enter]);
 
     // if the state variable enter is true redirect to path "/about/"
     
+    if(enter===true){
 
+        return <Redirect to="/about"/>
+    }
     
 
     return(
