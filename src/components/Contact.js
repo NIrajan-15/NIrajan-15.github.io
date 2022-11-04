@@ -29,7 +29,8 @@ function Contact(){
 
 
     // Function to send email to nirajan according to template setup on emailjs
-    const sendEmail = (e) => {
+    function sendEmail(e) {
+        
         
         //to cancel once changes is made on email field  
         e.preventDefault();
