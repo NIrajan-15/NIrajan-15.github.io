@@ -13,24 +13,27 @@ function Home(){
     // use effect hook to load the joke and set variables to true and redirect to about  page.
     useEffect(() => {
 
-        // set timeout function to set enter to true which redirects to about page 1500ms after component loads.
-        setTimeout(() => console.log("works"), 500);
-        
-        setKidMsg(true)
         
         //set timeour function to set kidmsg to true which loads "just kidding" messsage 500ms after component loads.
-        setTimeout(()=>console.log('works again'),1000);
-        
-        setEnter(true)
+        const enterTimer = setTimeout(()=>setEnter(true),1000);
 
-      
+        // set timeout function to set enter to true which redirects to about page 1500ms after component loads.
+        const kidTimer = setTimeout(() => setKidMsg(true), 500);
+        
+        return () => {
+            clearTimeout(kidTimer);
+            clearTimeout(enterTimer);
+
+            if(enter===true){
+
+                return <Redirect to="/about"/>
+            }
+        }
+        
     },[enter],[kidMsg]);
 
     // if the state variable enter is true redirect to path "/about/"
-    if(enter===true){
-
-        return <Redirect to="/about"/>
-    }
+    
 
     
 
