@@ -27,10 +27,6 @@ function Contact(){
         }   
     }
 
-    // Effect hook to hide fake submit button if email is incorrect
-    useEffect(()=> {
-        
-    },[error])
 
     // Function to send email to nirajan according to template setup on emailjs
     const sendEmail = (e) => {
