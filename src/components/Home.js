@@ -15,7 +15,7 @@ function Home(){
 
         
         //set timeour function to set kidmsg to true which loads "just kidding" messsage 500ms after component loads.
-        const enterTimer = setTimeout(()=>setEnter(true),1000);
+        const enterTimer = setTimeout(()=>setEnter(true),1200);
 
         // set timeout function to set enter to true which redirects to about page 1500ms after component loads.
         const kidTimer = setTimeout(() => setKidMsg(true), 500);

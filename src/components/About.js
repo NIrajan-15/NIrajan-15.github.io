@@ -29,7 +29,7 @@ function About(){
                     Hi, I'm
                     <h1> Nirajan Sangarula. </h1>
                     <br/>
-                    <h4> I'm a Developer. </h4>
+                    <h4> I'm a Learner. </h4>
                     <br/><br/>
                     
                 <h4>Feel Free to Checkout my <a href={Resume} target='_blank' rel='noopener noreferrer'>Resume</a> .</h4>

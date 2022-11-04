@@ -160,7 +160,7 @@ img{
     .projRow{
         width: 80vw;
         margin-right: 10vw;
-        height: 75vh;
+        min-height: 75vh;
         margin-top: 5vh;   
     }
     .projectContainer{
