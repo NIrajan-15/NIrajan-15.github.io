@@ -14,13 +14,13 @@ function Home(){
     useEffect(() => {
 
         // set timeout function to set enter to true which redirects to about page 1500ms after component loads.
-        const enterTimer = setTimeout(() => console.log("works"), 500);
-        clearTimeout(enterTimer)
+        setTimeout(() => console.log("works"), 500);
+        
         setKidMsg(true)
         
         //set timeour function to set kidmsg to true which loads "just kidding" messsage 500ms after component loads.
-        const kidTimer = setTimeout(()=>console.log('works again'),1000);
-        clearTimeout(kidTimer)
+        setTimeout(()=>console.log('works again'),1000);
+        
         setEnter(true)
 
 
