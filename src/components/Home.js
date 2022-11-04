@@ -19,7 +19,7 @@ function Home(){
         //set timeour function to set kidmsg to true which loads "just kidding" messsage 500ms after component loads.
         setTimeout(()=>setKidMsg(true),500);
       
-    });
+    },[enter],[kidMsg]);
 
     // if the state variable enter is true redirect to path "/about/"
     if(enter===true){
