@@ -100,7 +100,7 @@ img{
 @media only screen and (max-width: 853px){
     .projRow{
         padding-left: 3vw;
-        height: 72vh;
+        height: 69vh;
         margin-top: 1vh;
         font-size: smaller;
         margin-top: 3vh;
@@ -139,7 +139,7 @@ img{
 @media only screen and (max-width:450px){
     .projRow{
         padding-left: 3.5vw;
-        height: 75vh;
+        height: 72vh;
         margin-top: 3vh;
         
         
@@ -160,7 +160,7 @@ img{
     .projRow{
         width: 80vw;
         margin-right: 10vw;
-        height: 83vh;
+        height: 75vh;
         margin-top: 5vh;   
     }
     .projectContainer{
@@ -173,7 +173,7 @@ img{
 @media only screen and (max-width: 300px){
 
     .projRow{
-        height: 95vh;     
+        height: 80vh;     
     }
    
   
