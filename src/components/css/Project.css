@@ -68,11 +68,13 @@ img{
 /* For screen with width smaller than 1500px */
 @media only screen and (max-width:1500px)
 {
+    .Container{
+        padding-left: 10vw;
+    }
+
     .projCol{
     
-        width: 80vw;
-        height: 125vh;
-        border-style: dotted;  
+        width: 80vw;  
     }
     
     .projectContainer{
