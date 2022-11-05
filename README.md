@@ -1,6 +1,6 @@
 # Personal Portfolio Website.
 
-![![CI/CD](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment)
 
 
 # Getting Started with Create React App
