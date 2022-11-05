@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useRef, useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import "./css/Contact.css"
 import validator from 'validator';
@@ -9,11 +9,17 @@ function Contact(){
     // Declare state variable "error" with initail value false
     const[error, setError] = useState(null)
     
+    const form = useRef();
+
+    useEffect(()=>{
+
+    },[error]);
     
     // Function to validate the email using validator package
     const valildateEmail = (e) =>{
 
     
+
     // Set email to value inside message box
     let email = e.target.value    
 
@@ -29,15 +35,17 @@ function Contact(){
 
 
     // Function to send email to nirajan according to template setup on emailjs
-    function sendEmail(e) {
+    const sendEmail = (e) => {
         
         
         //to cancel once changes is made on email field  
         e.preventDefault();
 
+        console.log("HI")
+
         // send from to emailjs 
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
-        .then((result) => {
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        .then(() => {
 
             window.alert("message sent")
             window.location.reload()
@@ -55,7 +63,7 @@ function Contact(){
             <div clas="col form" id="form">
 
                 {/* Form to send email message to Nirajan on submitting  */}
-                <form className="contact-form" onSubmit={sendEmail}>
+                <form className="contact-form" ref={form} onSubmit={sendEmail}>
 
                 <input type="hidden" name="contact-form"/>
 
@@ -88,7 +96,7 @@ function Contact(){
 
                 {error===false &&(
                     <div>
-                    <button class="btn btn-danger subButton">Submit</button>
+                    <button class="btn btn-danger subButton"><input type="Submit" value="Submit"></input></button>
                     </div>
                 )}
                       
