@@ -1,6 +1,6 @@
 # Personal Portfolio Website.
 
-![GitHub CI](https://github.com/dwyl/auth_plug/actions/workflows/CI_CD.yml/badge.svg)
+![![CI/CD](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment)
 
 
 # Getting Started with Create React App
