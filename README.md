@@ -1,3 +1,8 @@
+# Personal Portfolio Website.
+
+![GitHub CI](https://github.com/dwyl/auth_plug/actions/workflows/CI_CD.yml/badge.svg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
