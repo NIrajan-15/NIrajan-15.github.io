@@ -96,7 +96,7 @@ function Contact(){
 
                 {error===false &&(
                     <div>
-                    <button class="btn btn-danger subButton"><input type="Submit" value="Submit"></input></button>
+                    <button class="btn btn-danger subButton">Submit</button>
                     </div>
                 )}
                       
