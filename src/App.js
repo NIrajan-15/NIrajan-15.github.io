@@ -19,6 +19,7 @@ function App() {
            
            <Switch>
               <Route exact path="/" component={Home}/>
+              
               <Fragment>
                 <Header/>
                   <Route exact path="/about" component={About}/>

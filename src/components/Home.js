@@ -1,8 +1,10 @@
 import React,{useEffect,useState} from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import './css/Home.css'
 
 function Home(){
+
+    
 
     // declaring state variable enter with initial state false that redirects to about page if true.
     const[enter, setEnter] = useState(false);
@@ -27,13 +29,13 @@ function Home(){
             
         }
         
-    },[enter]);
+    });
 
     // if the state variable enter is true redirect to path "/about/"
     
     if(enter===true){
 
-        return <Redirect to="/about"/>
+        return <Redirect exact to="/about"/>
     }
     
 
