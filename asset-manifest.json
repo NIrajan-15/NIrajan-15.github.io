@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Nirajan-Sangraula/static/css/main.8268641d.css",
-    "main.js": "/Nirajan-Sangraula/static/js/main.36b2e688.js",
+    "main.js": "/Nirajan-Sangraula/static/js/main.70416abe.js",
     "static/js/787.1ed0c42c.chunk.js": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js",
     "static/media/acm1.png": "/Nirajan-Sangraula/static/media/acm1.1f2e20b0aa090b8a6989.png",
     "static/media/acm3.png": "/Nirajan-Sangraula/static/media/acm3.2275a00bff6043acbe6f.png",
     "static/media/blue1.PNG": "/Nirajan-Sangraula/static/media/blue1.0b62969108e3c1fa504e.PNG",
     "static/media/blue2.PNG": "/Nirajan-Sangraula/static/media/blue2.858d2e7f1fc6cb00964c.PNG",
     "static/media/blue3.PNG": "/Nirajan-Sangraula/static/media/blue3.3af8188811cd3bef0fcd.PNG",
-    "static/media/Resume.pdf": "/Nirajan-Sangraula/static/media/Resume.db0347e3626030973fae.pdf",
+    "static/media/Resume.pdf": "/Nirajan-Sangraula/static/media/Resume.33160edc8be248c10e08.pdf",
     "static/media/acm2.png": "/Nirajan-Sangraula/static/media/acm2.8de2fa7ed0ee802b9629.png",
     "static/media/todo3.PNG": "/Nirajan-Sangraula/static/media/todo3.9a32e67815cad7665399.PNG",
     "static/media/todo2.PNG": "/Nirajan-Sangraula/static/media/todo2.d60284e50b440df1aba5.PNG",
@@ -16,11 +16,11 @@
     "static/media/coder.gif": "/Nirajan-Sangraula/static/media/coder.5f9a876ef08303441b5a.gif",
     "index.html": "/Nirajan-Sangraula/index.html",
     "main.8268641d.css.map": "/Nirajan-Sangraula/static/css/main.8268641d.css.map",
-    "main.36b2e688.js.map": "/Nirajan-Sangraula/static/js/main.36b2e688.js.map",
+    "main.70416abe.js.map": "/Nirajan-Sangraula/static/js/main.70416abe.js.map",
     "787.1ed0c42c.chunk.js.map": "/Nirajan-Sangraula/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8268641d.css",
-    "static/js/main.36b2e688.js"
+    "static/js/main.70416abe.js"
   ]
 }
