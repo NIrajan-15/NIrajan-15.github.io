@@ -39,7 +39,7 @@ function Header(){
     return(
         
         <div class ='main_container'>
-
+            
             <div class="row header_box">
 
                 {/* hyperlinks to /about path */}
@@ -56,7 +56,6 @@ function Header(){
                 <div class="col links" >
                     <Link id="nav-link3" class="passive"  onClick={handleClick3} activeClassName="active" to='/contact'>Contact</Link>
                 </div>
-                
                 
             </div>
         </div>

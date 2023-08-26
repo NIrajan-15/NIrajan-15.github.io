@@ -7,34 +7,27 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Test from './components/test';
 
 function App() {
   return (
     <>
     <div className='App'>
     <BrowserRouter basename="/Nirajan-Sangraula/">
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        
+        <Fragment>
+          <Header/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Route exact path="/projects" component={Projects}/>
+            <Route exact path="/test" component={Test}/>
+          <Footer/>
+
+        </Fragment>
       
-
-      
-           
-           <Switch>
-              <Route exact path="/" component={Home}/>
-              
-              <Fragment>
-                <Header/>
-                  <Route exact path="/about" component={About}/>
-                  <Route exact path="/contact" component={Contact}/>
-                  <Route exact path="/projects" component={Projects}/>
-                <Footer/>
-
-              </Fragment>
-            
-            </Switch>
-            
-
-            
-            
-          
+      </Switch>   
     </BrowserRouter>
     </div>
     

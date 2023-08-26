@@ -3,6 +3,7 @@ import './css/About.css';
 import './Images/coder.gif'
 import Resume from './Images/Resume.pdf'
 import './css/Header.css'
+import { Box, Grid, Card, Paper, Typography } from '@mui/material';
 
 
 
@@ -10,8 +11,10 @@ import './css/Header.css'
 function About(){
 
     return(
+    <>
         <body>
-    <div class="container1">
+    <div class="test">
+        <div class="container1">
         
         <div class="row welcome_box">
                 
@@ -60,7 +63,44 @@ function About(){
             </div>    
         </div>             
     </div>
-    </body>           
+    </div>
+    </body>
+    <>
+    <Box
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    width="100vw"
+    height="90vh"
+    bgcolor="lightgrey"
+    p={2}
+    margin="auto"
+  >
+    <Grid container spacing={2}>
+      <Grid item xs={6}>
+      
+          {/* Content for the right grid */}
+          
+            
+        Hi, I'm
+        <h1> Nirajan Sangarula. </h1>
+        <br/>
+        <h4> I'm a Learner. </h4>
+        <br/><br/>
+            
+        <h4>Feel Free to Checkout my <a href={Resume} target='_blank' rel='noopener noreferrer'>Resume</a> .</h4>
+        
+      </Grid>
+      <Grid item xs={6}>
+        <Paper style={{ width: '99%', backgroundColor: 'white' }}>
+          {/* Content for the right grid */}
+          Right Grid
+        </Paper>
+      </Grid>
+    </Grid>
+  </Box> 
+  </>  
+</>   
 );
 
 }
