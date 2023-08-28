@@ -9,6 +9,7 @@ import Experience from './Experience';
 import Kaam from './Kaam';
 import Contact from './Contact';
 import Sam from './Sam';
+import profile from './Images/profile.png';
 
 const Test = () => {
   const imageAnimation = useSpring({
@@ -30,14 +31,14 @@ const Test = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="94vh"
-        bgcolor="white"
+        minHeight='90vh'
+        backgroundColor='white'
       >
         <Box
           width="100vw"
           p={1}
           boxShadow={4}
-          bgcolor="white"
+          bgcolorbackgroundColor='#f0f0f0'
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -46,9 +47,9 @@ const Test = () => {
           <Grid container spacing={4}>
             <Grid lg={2}></Grid>
             
-            <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh">
+            <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh" >
               <animated.div style={nameAnimation}>
-                <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+                <Typography variant="h4" >
                   Hi, I'm Nirajan Sangraula.
                 </Typography>
               
@@ -100,14 +101,14 @@ const Test = () => {
               </Box>
               </animated.div>
             </Grid>
-            <Grid item xs={1} sm={6} md={6} lg={4} textAlign="center" minHeight='40vh'>
+            <Grid item xs={0} sm={0} md={6} lg={4} textAlign="center">
               <animated.img
                 src="https://thumbs.gfycat.com/ExemplaryFairFeline-size_restricted.gif"
                 alt="Profile"
                 style={{
                   borderRadius: '50%',
-                  width: '100%',
-                  height: '100%',
+                  width: '90%',
+                  height: '90%',
                   ...imageAnimation,
                 }}
               />

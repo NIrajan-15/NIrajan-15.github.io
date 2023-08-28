@@ -1,68 +1,97 @@
-import React,{useState,useEffect} from 'react';
-import './css/Header.css';
-import {Link} from 'react-router-dom';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
+const drawerWidth = 240;
+const navItems = ['About', 'Experience', 'Projects', 'Contact'];
 
-// Function to return the header section of the website.
-function Header(){
+export default function DrawerAppBar(props) {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    // declaring state variable active with initial state 1.
-    // active variable indicates the active tab of the website with 1 - About, 2 - Projects, 3 - Contact.
-    const[active,setActive] = useState(1);
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
 
-    // fucntions to set tab 1,2, and 3 on clicking on the respective tab.
-    const handleClick1 = () => setActive(1);
-    const handleClick2 = () => setActive(2);
-    const handleClick3 = () => setActive(3);
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 , color:'teal'}}>
+        Nirajan Sangraula
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center', color: 'teal' }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
+  const container = window !== undefined ? () => window().document.body : undefined;
 
-    // effect hook to set active tabs color to blue and other tabs to white.
-    useEffect(() => {
-        
-            // looping from 1 through 4 to set and reset active tabs.
-            for(let i=1;i<4;i++)
-            {
-                // set the active tab color to blue.
-                if(active===i)
-                {
-                    document.getElementById("nav-link"+i.toString()).style.color = " rgb(0, 175, 202)";
-                }
-                // set non-active tab colors to white.
-                else{
-                    document.getElementById("nav-link"+i.toString()).style.color = "white";
-                }
-                
-            }
-    })
-    
-
-    return(
-        
-        <div class ='main_container'>
-            
-            <div class="row header_box">
-
-                {/* hyperlinks to /about path */}
-                <div class="col links">
-                    <Link id="nav-link1"  class="nav-link1"  onClick={handleClick1} activeClassName="active" to='/about'>About</Link>
-                </div>
-
-                {/* hyperlinks to /about path */}
-                <div class="col links" >
-                    <Link id="nav-link2" class="passive" onClick={handleClick2}  activeClassName="active" to='/projects'>Projects</Link>
-                </div>
-                
-                {/* hyperlinks to /about path */}
-                <div class="col links" >
-                    <Link id="nav-link3" class="passive"  onClick={handleClick3} activeClassName="active" to='/contact'>Contact</Link>
-                </div>
-                
-            </div>
-        </div>
-            
-        
-    );
+  return (
+    <Box sx={{ backgroundColor: 'white' }}>
+      <CssBaseline />
+      <AppBar component="nav" sx={{ color: 'teal', backgroundColor: 'white', boxShadow: 'none' }}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: 'teal' }}
+          >
+            Nirajan Sangraula
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: 'teal' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
+  );
 }
-
-// export function header to access in other files
-export default Header;

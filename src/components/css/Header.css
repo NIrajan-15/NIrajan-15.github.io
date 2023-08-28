@@ -1,7 +1,7 @@
 .main_container{
     height: 6vh;
     width: 100vw;
-    background-color: #000000;
+    background-color: white;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0; 
@@ -12,15 +12,13 @@
     text-align: center;
     height: 6vh;
     width: 100vw;
-    padding: 1.5vh;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    color: rgb(255, 255, 255);
+    padding-top: 1.5vh;
+    color: teal;
     font-family: cursive;
 }
 
 .links{
-    color: white;
+    color: teal;;
 }
 
 .links:hover{
@@ -32,16 +30,16 @@
 }
 
 .nav-link1,.nav-link2,.nav-link3{
-    color:white;
+    color:teal;
     text-decoration: none;
 }
 
 .active{
-    color:rgb(150, 91, 91);
+    color: teal;
 }
 
 .passive{
-    color: white;
+    color: teal;
     text-decoration: none;
 }
 
@@ -55,8 +53,7 @@
 /* For screen with width smaller than 400px */
 @media only screen and (max-width:400px){
     .header_box{
-        padding-left: 13vw;
-        padding-right: 10vw;
+        
         
     }   
 }

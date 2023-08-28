@@ -1,86 +1,105 @@
-import React, { useState, useRef, useEffect } from 'react';
-import emailjs from 'emailjs-com';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { LinkedIn, GitHub } from '@mui/icons-material';
+import React, {useState, useRef} from 'react';
+import { styled } from '@mui/material/styles';
+import { Container, Typography, TextField, Button, Grid } from '@mui/material';
 import validator from 'validator';
+import emailjs from 'emailjs-com';
+import { Send } from '@mui/icons-material';
 
-const Sam = () => {
-  const [error, setError] = useState(null);
+const FormContainer = styled('div')(({ theme }) => ({
+  padding: theme.spacing(4),
+  borderRadius: theme.spacing(2),
+  textAlign: 'center',
+  '& .MuiTextField-root': {
+    margin: theme.spacing(1),
+  },
+  '& .MuiButton-root': {
+    marginTop: theme.spacing(2),
+  },
+}));
+
+const Contact = () => {
+  const [error, setError] = useState(false);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const form = useRef();
+  
+  const validateEmail = (email) => {
+    setError(!validator.isEmail(email));
+  };
 
-  useEffect(() => {}, [error]);
+  const handleEmailChange = (e) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
 
-  const validateEmail = (e) => {
-    let email = e.target.value;
-
-    if (validator.isEmail(email)) {
-      setError(false);
-    } else {
-      setError(true);
+    if(!validateEmail(newEmail))
+    {
+      setMessage("Please enter a Valid Email Address")
     }
   };
 
+  // Function to send email to nirajan according to template setup on emailjs
   const sendEmail = (e) => {
+        
+        
+    //to cancel once changes is made on email field  
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          window.alert('Message sent');
-          window.location.reload();
-        },
-        (error) => {
-          document.getElementById('error').innerHTML = 'Error Sending Message!';
-        }
-      );
-  };
+    console.log("HI")
 
+    // send from to emailjs 
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+    .then(() => {
+
+        window.alert("message sent")
+        window.location.reload()
+      
+    // if error occurs then Error message is displayed
+    },(error) => {
+        document.getElementById("error").innerHTML = "Error Sending Message!"
+    })
+
+}
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      minHeight="100vh"
-      bgcolor="rgba(0, 0, 0, 0.8)"
-      color="#EFEFEF"
-      flexDirection="column"
-      p={4}
-    >
-      <Box
-        width="100vw"
-        height="5vh"
-        p={1}
-        bgcolor="rgba(0, 0, 0, 0.5)"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        marginBottom={4}
-      >
-        <Typography variant="h6">Contact</Typography>
-      </Box>
-      <Box
-        width="100vw"
-        p={4}
-        boxShadow={4}
-        bgcolor="rgba(0, 0, 0, 0.5)"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        {/* Rest of your form and content here */}
-      </Box>
-    </Box>
+    
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '91vh'}}>
+      <Container maxWidth="sm">
+        <FormContainer>
+          <Typography variant="h4" gutterBottom>
+            
+          </Typography>
+          <form onSubmit={sendEmail}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField label="Name" required fullWidth />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField label="Email" onChange={handleEmailChange} required fullWidth />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField label="Message" required multiline fullWidth rows={4} />
+              </Grid>
+
+              <Grid item xs={12}>
+              <Typography  variant="body1" color="error" id="error">
+                {message}
+              </Typography>
+                
+              <Button
+              variant="contained"
+              color="primary"
+              startIcon={<Send />}
+              disabled={error}
+            >
+              Send Message
+            </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </FormContainer>
+      </Container>
+    </div>
+      
   );
 };
 
-export default Sam;
+export default Contact;

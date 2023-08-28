@@ -1,15 +1,16 @@
 import React from 'react';
+import {Box, Paper} from '@mui/material';
 import './css/Footer.css';
 
 // Function that returns the footer section
 function Footer(){
     return(
+        
+        <Box>
+            <Paper>
 
-        <div class="col footer">
-
-            Designed and Developed by Nirajan Sangraula.
-
-        </div>
+            </Paper>
+        </Box>
 
     );
 }
