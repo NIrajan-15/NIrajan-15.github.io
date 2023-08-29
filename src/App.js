@@ -1,37 +1,30 @@
 import React, { Fragment } from 'react';
-import BrowserRouter  from 'react-router-dom/BrowserRouter'
-import {Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import About from './components/About';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
+import About from './components/test';
+import Contact from './components/Sam';
+import Projects from './components/Kaam';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Test from './components/test';
+import Experience from './components/Experience';
 
 function App() {
   return (
-    <>
     <div className='App'>
-    <BrowserRouter basename="/Nirajan-Sangraula/">
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        
-        <Fragment>
-          <Header/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/contact" component={Contact}/>
-            <Route exact path="/projects" component={Projects}/>
-            <Route exact path="/test" component={Test}/>
-          <Footer/>
-
-        </Fragment>
-      
-      </Switch>   
-    </BrowserRouter>
+      <Header/>
+      <div id="about">
+        <About/>
+      </div>
+      <div id="experience">
+        <Experience/>
+      </div>
+      <div id="projects">
+        <Projects/>
+      </div>
+      <div id="contact">
+        <Contact/>
+      </div>
     </div>
-    
-    </>
   )
 }
 

@@ -44,8 +44,8 @@ const Test = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid container spacing={4}>
-            <Grid lg={2}></Grid>
+          <Grid container spacing={2} paddingTop={16}>
+            <Grid  lg={2}></Grid>
             
             <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh" >
               <animated.div style={nameAnimation}>
@@ -101,7 +101,7 @@ const Test = () => {
               </Box>
               </animated.div>
             </Grid>
-            <Grid item xs={0} sm={0} md={6} lg={4} textAlign="center">
+            <Grid item xs={1} sm={6} md={6} lg={4} textAlign="center">
               <animated.img
                 src="https://thumbs.gfycat.com/ExemplaryFairFeline-size_restricted.gif"
                 alt="Profile"
@@ -117,9 +117,7 @@ const Test = () => {
           </Grid>
         </Box>
       </Box>
-      <Experience />
-      <Kaam />
-      <Sam />
+      
     </>
   );
 }

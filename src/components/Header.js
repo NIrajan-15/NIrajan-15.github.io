@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React, {useEffect, useState} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,28 +13,75 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from '@mui/material';
 
 const drawerWidth = 240;
-const navItems = ['About', 'Experience', 'Projects', 'Contact'];
+const navItems = ['ABOUT', 'EXPERIENCE', 'PROJECTS', 'CONTACT'];
 
 export default function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [activeTab, setActiveTab] = React.useState('ABOUT'); // Track active tab
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleTabClick = (item) => {
+    setActiveTab(item);
+    const element = document.getElementById(item.toLowerCase());
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    // if display is xs then close the drawer after clicking
+    if (window.innerWidth <= 600) {
+      handleDrawerToggle(); // Close the drawer after clicking if display is xs
+    }
+  };
+
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveTab(entry.target.id.toUpperCase());
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5, // Adjust the threshold as needed
+    });
+
+    navItems.forEach((item) => {
+      const target = document.getElementById(item.toLowerCase());
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 , color:'teal'}}>
+      <Typography variant="h6" sx={{ my: 2, color: 'teal' }}>
         Nirajan Sangraula
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center', color: 'teal' }}>
+            <ListItemButton
+              sx={{
+                textAlign: 'center',
+                color: activeTab === item ? 'teal' : 'black', // Apply different color for active tab
+                backgroundColor: activeTab === item ? 'lightgray' : 'white', // Apply background color for active tab
+
+              }}
+              onClick={() => handleTabClick(item)}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -44,11 +91,14 @@ export default function DrawerAppBar(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-
+  
   return (
     <Box sx={{ backgroundColor: 'white' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ color: 'teal', backgroundColor: 'white', boxShadow: 'none' }}>
+      <AppBar
+        component="nav"
+        sx={{ color: 'teal', backgroundColor: 'white', boxShadow: 'none' }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -62,13 +112,29 @@ export default function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: 'teal' }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', sm: 'block' },
+              color: 'teal',
+            }}
           >
-            Nirajan Sangraula
+            Nirajan Sangraula.
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'teal' }}>
+              <Button
+                key={item}
+                sx={{
+                  color: activeTab === item ? 'black' : 'teal', // Apply different color for active tab
+                  fontWeight: activeTab === item ? 'bold' : 'normal', // Apply font weight for active tab
+                  //add box shadow to active tab
+                  boxShadow: activeTab === item ? '0px 0px 10px 0px lightgray' : 'none',
+
+                }}
+                component={Link}
+                to={`/${item}`}
+                onClick={() => handleTabClick(item)}
+              >
                 {item}
               </Button>
             ))}
@@ -86,7 +152,10 @@ export default function DrawerAppBar(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}

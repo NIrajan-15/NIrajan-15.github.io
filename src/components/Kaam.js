@@ -56,48 +56,31 @@ const Kaam = () => {
   return (
     <Box p={3} minHeight='94vh'  backgroundColor='$F5FEFD' >
       
-      <Grid  spacing={1} justifyContent='center' paddingTop={8}>
+      <Grid container spacing={{ lg:2, md:1, xs:8 }} justifyContent='center' paddingTop={8} paddingBottom={8}>
         {projects.map((project) => (
           
-          <Grid item xs={12} md={12} lg={6} key={project.id} sx={{padding:{md:2,lg:6}}} >
+          <Grid item xs={12} sm={12} md={12} lg={9} key={project.id} sx={{padding:{md:2,lg:6}}} >
             <Paper elevation={3} sx={{ borderRadius:'8px', padding:'16px' }}>
             <Grid container>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} sm={6} md={6} lg={6} sx={{paddingTop:{md:3.1}}}>
             <Carousel
-              autoPlay
-              infiniteLoop
-              showStatus={false}
+              // hide thumbnails  
               showThumbs={false}
-              emulateTouch
-              stopOnHover
-              interval={3000}
-              transitionTime={500}
-              dynamicHeight
-              showArrows={true}
-              showIndicators={true}
-              showIndicatorsThumbs={true}
-              useKeyboardArrows={true}
-              swipeable={true}
-              centerMode={false}
-              selectedItem={0}
-              axis="horizontal"
-              onChange={() => {}}
-              onClickItem={() => {}}
-              onClickThumb={() => {}}
-              color="black"
+              //show arrows
+              showStatus={false}
               
             >
                 {project.images.map((image, imageIndex) => (
                   <div key={imageIndex}>
-                    <img src={image} alt="" />
+                    <img src={image} alt=""/>
                   </div>
                 ))}
               </Carousel>
             </Grid>
-            <Grid item xs={12} md={6} lg={6} >
+            <Grid item xs={12} sm={6} md={6} lg={6} >
               <Paper elevation={0} sx={{ p: 3 }}>
                 <Typography  variant="h5" alignItems='center'>
-                  {project.name} <a href={project.Link}><OpenInNewIcon /></a>
+                  {project.name} <a color='teal' href={project.Link}><OpenInNewIcon color='teal' /></a>
                 </Typography>
                 <hr></hr>
                 <Typography variant="subtitle1">
