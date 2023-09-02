@@ -76,7 +76,7 @@ export default function DrawerAppBar(props) {
             <ListItemButton
               sx={{
                 textAlign: 'center',
-                color: activeTab === item ? 'teal' : 'black', // Apply different color for active tab
+                color: 'teal',
                 backgroundColor: activeTab === item ? 'lightgray' : 'white', // Apply background color for active tab
 
               }}

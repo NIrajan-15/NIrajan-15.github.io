@@ -3,20 +3,21 @@ import { Box, Grid, Avatar, Divider, Paper, Typography } from '@mui/material';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
 import dxc from './Images/dxc.png';
 import ulm from './Images/ulm.png';
+import lsbdc from './Images/lsbdc.png';
 
 const experiences = [
   {
     companyLogo: dxc,
     companyName: 'DXC Technology',
-    jobTitle: 'Cloud Engineering Intern',
+    jobTitle: 'Software Engineering Intern',
     dateWorked: 'Jun 2023 – Present',
     location: 'New Orleans, LA',
   },
   {
-    companyLogo: ulm,
-    companyName: 'IBM Technology',
+    companyLogo: lsbdc,
+    companyName: 'IBM Technology LED Grant',
     jobTitle: 'Software Developer',
-    dateWorked: 'Aug 2021 – Jun 2023',
+    dateWorked: 'Aug 2021 – Aug 2023',
     location: 'Monroe, LA',
   },
   {
@@ -38,8 +39,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <Box minHeight='92vh' paddingTop={20} backgroundColor='white'>
-      <Grid container>
+    <Box minHeight='94vh'  paddingTop={20} backgroundColor='white' justifyContent={'center'}>
+      <Grid container >
         <Grid
           item xs={11.5} sm={9} md={8.5} lg={8} sx={{ justifyContent: 'center', display: 'flex' }}>
           <Timeline>
@@ -56,7 +57,7 @@ const Experience = () => {
                   </TimelineDot>
                   {index < experiences.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
-                <TimelineContent>
+                <TimelineContent >
                   <Paper elevation={3} sx={{ p: 2 }} backgroundColor='#f0f0f0'>
                     <Box display="flex" alignItems="center" width={250}>
                       <Typography variant="body1">

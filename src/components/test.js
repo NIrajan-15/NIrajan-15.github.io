@@ -5,23 +5,40 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { LinkedIn, GitHub, Description } from '@mui/icons-material';
 import { useSpring, animated } from 'react-spring';
-import Experience from './Experience';
-import Kaam from './Kaam';
-import Contact from './Contact';
-import Sam from './Sam';
-import profile from './Images/profile.png';
+import Resume from './Images/Resume.pdf';
+import SkillsGrid from './Skills';
 
 const Test = () => {
   const imageAnimation = useSpring({
     opacity: 1,
     transform: 'translateX(0)',
-    from: { opacity: 0.1, transform: 'translateX(-100px)' },
+    from: { opacity: 0.1, transform: 'translateX(100px)' },
+    config: {
+      tension: 200, // Adjust this value to control the intensity of the bounce
+      friction: 10, // Adjust this value to control the duration of the bounce
+    },
   });
 
   const nameAnimation = useSpring({
     opacity: 1,
     transform: 'translateX(0)',
-    from: { opacity: 0.1, transform: 'translateX(100px)' },
+    from: { opacity: 0.1, transform: 'translateX(-100px)' },
+    config: {
+      tension: 200, // Adjust this value to control the intensity of the bounce
+      friction: 10, // Adjust this value to control the duration of the bounce
+    },
+  });
+
+  
+
+  const skillAnimation = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(100px)' },
+    config: {
+      tension: 200, // Adjust this value to control the intensity of the bounce
+      friction: 10, // Adjust this value to control the duration of the bounce
+    },
   });
 
   return (
@@ -33,6 +50,7 @@ const Test = () => {
         alignItems="center"
         minHeight='90vh'
         backgroundColor='white'
+        
       >
         <Box
           width="100vw"
@@ -44,17 +62,16 @@ const Test = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid container spacing={2} paddingTop={16}>
-            <Grid  lg={2}></Grid>
+          <Grid container spacing={2} paddingTop={16} justifyContent={'center'}>
             
-            <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh" >
-              <animated.div style={nameAnimation}>
-                <Typography variant="h4" >
+            <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh"  >
+              <animated.div style={nameAnimation} >
+                <Typography variant="h4" fontFamily={'open Sans'}>
                   Hi, I'm Nirajan Sangraula.
                 </Typography>
               
               <Typography variant="body1" sx={{ mb: 3 }}>
-                I'm a passionate full-stack developer with an appetite for learning and exploring.
+                I'm a passionate Software Engineer with an appetite for learning and exploring.
               </Typography>
               <Typography variant="body1" sx={{ mb: 3 }}>
                 Let's Connect
@@ -91,7 +108,7 @@ const Test = () => {
                 <Button
                   variant="outlined"
                   startIcon={<Description />}
-                  href="link-to-your-resume.pdf"
+                  href={Resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ width: '100%' }}
@@ -101,7 +118,7 @@ const Test = () => {
               </Box>
               </animated.div>
             </Grid>
-            <Grid item xs={1} sm={6} md={6} lg={4} textAlign="center">
+            <Grid item xs={0.1} sm={6} md={6} lg={4} textAlign="center">
               <animated.img
                 src="https://thumbs.gfycat.com/ExemplaryFairFeline-size_restricted.gif"
                 alt="Profile"
@@ -114,7 +131,11 @@ const Test = () => {
               />
               
             </Grid>
+            <animated.div style={skillAnimation}>
+            <SkillsGrid />
+            </animated.div>
           </Grid>
+
         </Box>
       </Box>
       
