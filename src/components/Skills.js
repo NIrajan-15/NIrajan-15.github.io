@@ -43,11 +43,11 @@ const skillsData = [
 const SkillsGrid = () => {
   return (
     <>
-    <Typography width='100%' textAlign='center' fontSize={{xs:'1rem',sm:'1.5rem'}}  mb={4}>  
-      Learning these so far!
+    <Paper paddingLeft={2} >
+    <Typography width='100%' textAlign='center' fontFamily={'roboto'} fontSize={{xs:'1rem',sm:'1.5rem'}}  mb={4}>  
+      Learning these so far
     </Typography>
     <Grid container spacing={2} p={4} justifyContent={'center'} >
-      
       {skillsData.map((skill) => (
         <Grid item xs={2} sm={1.5} md={1.5} lg={1} key={skill.name}>
           
@@ -60,6 +60,7 @@ const SkillsGrid = () => {
         </Grid>
       ))}
     </Grid>
+    </Paper>
     </>
   );
 };

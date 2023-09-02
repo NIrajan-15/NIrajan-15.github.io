@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React from 'react';
 import Header from './components/Header';
-import About from './components/test';
-import Contact from './components/Sam';
-import Projects from './components/Kaam';
+import About from './components/About';
+import Contact from './components/Contact';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
-import Home from './components/Home';
 import Experience from './components/Experience';
+import './css/Scroller.css';
 
-function App() {
+function App(){
+
+
   return (
+    
     <div className='App'>
       <Header/>
       <div id="about">
@@ -24,6 +26,7 @@ function App() {
       <div id="contact">
         <Contact/>
       </div>
+      <Footer />
     </div>
   )
 }

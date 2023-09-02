@@ -39,7 +39,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <Box minHeight='94vh'  paddingTop={20} backgroundColor='white' justifyContent={'center'}>
+    <Box minHeight='95vh'  paddingTop={20} backgroundColor='white' justifyContent={'center'}>
       <Grid container >
         <Grid
           item xs={11.5} sm={9} md={8.5} lg={8} sx={{ justifyContent: 'center', display: 'flex' }}>

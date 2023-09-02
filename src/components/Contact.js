@@ -1,117 +1,109 @@
-import React,{useState,useRef, useEffect} from 'react';
-import emailjs from 'emailjs-com';
-import "./css/Contact.css"
+import React, {useState, useRef} from 'react';
+import { styled } from '@mui/material/styles';
+import { Container, Typography, TextField, Button, Grid } from '@mui/material';
 import validator from 'validator';
+import emailjs from 'emailjs-com';
+import { Send } from '@mui/icons-material';
+import Box from '@mui/material/Box';
 
-// Function that returns the contact section of the website
-function Contact(){
+const FormContainer = styled('div')(({ theme }) => ({
+  padding: theme.spacing(4),
+  borderRadius: theme.spacing(2),
+  textAlign: 'center',
+  '& .MuiTextField-root': {
+    margin: theme.spacing(1),
+  },
+  '& .MuiButton-root': {
+    marginTop: theme.spacing(2),
+  },
+}));
 
-    // Declare state variable "error" with initail value false
-    const[error, setError] = useState(null)
-    
-    const form = useRef();
-
-    useEffect(()=>{
-
-    },[error]);
-    
-    // Function to validate the email using validator package
-    const valildateEmail = (e) =>{
-
-    
-
-    // Set email to value inside message box
-    let email = e.target.value    
-
-        // if email in invalid then error and sub are set to false
-        if((validator.isEmail(email))){
-            setError(false)
-            
-        } 
-        else{
-            setError(true)    
-        }   
+const Contact = () => {
+  const [error, setError] = useState(true);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const form = useRef();
+  
+  const validateEmail = () => {
+    if(!validator.isEmail(email))
+    {
+      setMessage('Please enter a valid email address');
+      setError(true);
     }
-
-
-    // Function to send email to nirajan according to template setup on emailjs
-    const sendEmail = (e) => {
-        
-        
-        //to cancel once changes is made on email field  
-        e.preventDefault();
-
-        console.log("HI")
-
-        // send from to emailjs 
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
-        .then(() => {
-
-            window.alert("message sent")
-            window.location.reload()
-          
-        // if error occurs then Error message is displayed
-        },(error) => {
-            document.getElementById("error").innerHTML = "Error Sending Message!"
-        })
-
+    else
+    {
+      setMessage('');
+      setError(false);
     }
+  };
 
-    return(
-        <div class="col contactContainer">
+  const handleEmailChange = (e) => {
+    let Email = e.target.value;
+    setEmail(Email);
+    validateEmail(Email);
+
+  };
+
+  // Function to send email to nirajan according to template setup on emailjs
+  const sendEmail = (e) => {
+    //to cancel once changes is made on email field  
+    e.preventDefault();
+
+    // send from to emailjs 
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+    .then(() => {
+
+        window.alert("message sent")
+        window.location.reload()
+      
+    // if error occurs then Error message is displayed
+    },(error) => {
+        document.getElementById("error").innerHTML = "Error Sending Message!"
+    })
+  }
+
+  return (
+      <Box minHeight='91vh' paddingTop={16}>
+      <Container maxWidth="sm">
+        <FormContainer>
+          <Typography variant="h4" gutterBottom>
             
-            <div clas="col form" id="form">
+          </Typography>
+          <form ref={form} onSubmit={sendEmail}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField label="Name" required fullWidth />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField label="Email" onChange={handleEmailChange} required fullWidth />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField label="Message" required multiline fullWidth rows={4} />
+              </Grid>
 
-                {/* Form to send email message to Nirajan on submitting  */}
-                <form className="contact-form" ref={form} onSubmit={sendEmail}>
+              <Grid item xs={12}>
+              <Typography  variant="body1" color="error" id="error">
+                {email &&  <span>{message}</span>}
+              </Typography>
+                
+              <Button
+              variant="contained"
+              color="primary"
+              startIcon={<Send />}
+              disabled={error}
+              type="submit"
+              fullWidth
+            >
+              Send Message
+            </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </FormContainer>
+      </Container>
+    </Box>
+      
+  );
+};
 
-                <input type="hidden" name="contact-form"/>
-
-                {/* Name of the sender*/}
-                <div class="row nameBox">
-                    <label> <h5>Name</h5> </label>
-                    <input type="text" class="top" name="name" required/>
-                </div>
-
-                {/* Email of the sender*/}
-                <div class="row emailBox">
-                    <label> <h5>Email</h5> </label>
-                    <input type="text" class="top" name="email" required  onChange={(e) => valildateEmail(e)}></input>
-                </div>
-
-                {/* if email is not in validator package validating pattern then dispaly error message */}
-                {error===true &&(
-                    <div class="error" id="error">
-                    Error! Please Enter valid Email Address.
-                </div>
-                )}
-
-                <input type="hidden" name="subject" />
-
-                {/* Message of the sender */}
-                <div class="row Message">
-                    <label> <h5>Message</h5> </label>
-                    <input type="text" class="messageInput" name="message" required></input>
-                </div>
-
-                {error===false &&(
-                    <div>
-                    <button class="btn btn-danger subButton">Submit</button>
-                    </div>
-                )}
-                      
-                </form>
-                {(error===null|| error===true )&&(
-                    <div>
-                    <button class="btn btn-danger subButton">Submit</button>
-                    </div>
-                )}
-
-            </div> 
-                   
-        </div>
-    );
-}
-
-// export function contact to access in other files
 export default Contact;
