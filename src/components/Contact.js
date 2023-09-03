@@ -22,35 +22,37 @@ const Contact = () => {
   const [error, setError] = useState(true);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
   const form = useRef();
   
-  const validateEmail = () => {
+  const validateEmail = (e) => {
+    let email = e.target.value;
     if(!validator.isEmail(email))
     {
-      setMessage('Please enter a valid email address');
       setError(true);
     }
     else
     {
-      setMessage('');
       setError(false);
+      setEmail(email);
     }
   };
 
-  const handleEmailChange = (e) => {
-    let Email = e.target.value;
-    setEmail(Email);
-    validateEmail(Email);
-
-  };
+  
 
   // Function to send email to nirajan according to template setup on emailjs
   const sendEmail = (e) => {
     //to cancel once changes is made on email field  
     e.preventDefault();
 
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
     // send from to emailjs 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+    emailjs.send(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
     .then(() => {
 
         window.alert("message sent")
@@ -60,6 +62,7 @@ const Contact = () => {
     },(error) => {
         document.getElementById("error").innerHTML = "Error Sending Message!"
     })
+    
   }
 
   return (
@@ -72,20 +75,17 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField label="Name" required fullWidth />
+                <TextField label="Name" onChange={(e)=>setName(e.target.value)} required fullWidth />
               </Grid>
               <Grid item xs={12}>
-                <TextField label="Email" onChange={handleEmailChange} required fullWidth />
+                <TextField label="Email" onChange={validateEmail} required fullWidth />
               </Grid>
               <Grid item xs={12}>
-                <TextField label="Message" required multiline fullWidth rows={4} />
+                <TextField label="Message" onChange={(e)=>setMessage(e.target.value)} required multiline fullWidth rows={4} />
               </Grid>
 
               <Grid item xs={12}>
-              <Typography  variant="body1" color="error" id="error">
-                {email &&  <span>{message}</span>}
-              </Typography>
-                
+        
               <Button
               variant="contained"
               color="primary"

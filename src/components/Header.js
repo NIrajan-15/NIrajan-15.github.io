@@ -18,7 +18,7 @@ import { Link } from '@mui/material';
 const drawerWidth = 240;
 const navItems = ['ABOUT', 'EXPERIENCE', 'PROJECTS', 'CONTACT'];
 
-export default function DrawerAppBar(props) {
+ const Navbar =(props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState('ABOUT'); // Track active tab
@@ -164,3 +164,5 @@ export default function DrawerAppBar(props) {
     </Box>
   );
 }
+
+export default Navbar;

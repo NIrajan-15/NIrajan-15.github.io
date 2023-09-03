@@ -40,10 +40,10 @@ const skillsData = [
   { name: 'Postman', icon: <SiPostman />, bgColor: '#D32F2F' },
 ];
 
-const SkillsGrid = () => {
+const Skills = () => {
   return (
     <>
-    <Paper paddingLeft={2} >
+    <Paper paddingleft={2} >
     <Typography width='100%' textAlign='center' fontFamily={'roboto'} fontSize={{xs:'1rem',sm:'1.5rem'}}  mb={4}>  
       Learning these so far
     </Typography>
@@ -65,4 +65,4 @@ const SkillsGrid = () => {
   );
 };
 
-export default SkillsGrid;
+export default Skills;

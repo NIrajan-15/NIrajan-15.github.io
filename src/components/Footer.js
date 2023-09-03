@@ -3,7 +3,7 @@ import {Grid} from '@mui/material';
 import { LinkedIn, GitHub } from '@mui/icons-material';
 
 // Function that returns the footer section
-function Footer(){
+const Footer =() =>{
     return(
         
         

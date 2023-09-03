@@ -5,10 +5,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { LinkedIn, GitHub, Description } from '@mui/icons-material';
 import { useSpring, animated } from 'react-spring';
-import Resume from './Images/Resume.pdf';
+import Resume from '../Images/Resume.pdf';
 import SkillsGrid from './Skills';
 
-const Test = () => {
+const About = () => {
   const imageAnimation = useSpring({
     opacity: 1,
     transform: 'translateX(0)',
@@ -28,8 +28,6 @@ const Test = () => {
       friction: 10, // Adjust this value to control the duration of the bounce
     },
   });
-
-  
 
   const skillAnimation = useSpring({
     opacity: 1,
@@ -56,13 +54,14 @@ const Test = () => {
           width="100vw"
           p={1}
           boxShadow={4}
-          bgcolorbackgroundColor='#f0f0f0'
+          backgroundColor='white'
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
+          paddingLeft={2}
         >
-          <Grid container spacing={2} paddingTop={16} justifyContent={'center'}>
+          <Grid container spacing={2} paddingTop={16} paddingBottom={4} justifyContent={'center'}>
             
             <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh"  >
               <animated.div style={nameAnimation} >
@@ -131,7 +130,7 @@ const Test = () => {
               />
               
             </Grid>
-            <Grid item xs={12} lg={10}>
+            <Grid item xs={12} lg={8}>
             <animated.div style={skillAnimation}>
             <SkillsGrid />
             </animated.div>
@@ -145,5 +144,5 @@ const Test = () => {
   );
 }
 
-export default Test;
+export default About;
 
