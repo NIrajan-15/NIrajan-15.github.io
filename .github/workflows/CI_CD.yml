@@ -5,7 +5,7 @@ name: Portfolio CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ New_Version ]
 
 
 jobs:
