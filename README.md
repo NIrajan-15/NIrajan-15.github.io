@@ -1,4 +1,4 @@
-# Personal Portfolio Website.
+# Portfolio Website.
 
  [![Portfolio CI/CD](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/CI_CD.yml/badge.svg)](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/CI_CD.yml) [![pages-build-deployment](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NIrajan-15/Nirajan-Sangraula/actions/workflows/pages/pages-build-deployment)
 
