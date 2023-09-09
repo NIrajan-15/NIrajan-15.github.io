@@ -86,7 +86,7 @@ const About = () => {
                   variant="contained"
                   color="primary"
                   startIcon={<LinkedIn />}
-                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  href="https://www.linkedin.com/in/nirajan-sangraula"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ mb: 2, width: '100%' }}
@@ -97,7 +97,7 @@ const About = () => {
                   variant="contained"
                   color="secondary"
                   startIcon={<GitHub />}
-                  href="https://github.com/your-github-profile"
+                  href="https://github.com/NIrajan-15"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ mb: 2, width: '100%' }}
@@ -120,7 +120,7 @@ const About = () => {
             <Grid item xs={0} sm={6} md={6} lg={4} textAlign="center">
               <animated.img
                 src="https://thumbs.gfycat.com/ExemplaryFairFeline-size_restricted.gif"
-                alt=""
+                alt="."
                 style={{
                   borderRadius: '50%',
                   width: '90%',
