@@ -7,6 +7,7 @@ import { LinkedIn, GitHub, Description } from '@mui/icons-material';
 import { useSpring, animated } from 'react-spring';
 import Resume from '../Images/Resume.pdf';
 import SkillsGrid from './Skills';
+import LandImage from '../Images/LandImage.gif';
 
 const About = () => {
   const imageAnimation = useSpring({
@@ -119,8 +120,8 @@ const About = () => {
             </Grid>
             <Grid item xs={0} sm={6} md={6} lg={4} textAlign="center">
               <animated.img
-                src="https://thumbs.gfycat.com/ExemplaryFairFeline-size_restricted.gif"
-                alt="."
+                src={LandImage}
+                alt=""
                 style={{
                   borderRadius: '50%',
                   width: '90%',
