@@ -62,7 +62,7 @@ const About = () => {
           alignItems="center"
           paddingLeft={2}
         >
-          <Grid container spacing={2} paddingTop={16} paddingBottom={4} justifyContent={'center'}>
+          <Grid container spacing={{sx:2, lg:1}} paddingTop={16} paddingBottom={4} justifyContent={'center'}>
             
             <Grid item xs={12} sm={6} md={6} lg={4} p={1} minHeight="40vh"  >
               <animated.div style={nameAnimation} >
@@ -118,10 +118,10 @@ const About = () => {
               </Box>
               </animated.div>
             </Grid>
-            <Grid item xs={0} sm={6} md={6} lg={4} textAlign="center">
+            <Grid item xs={0.1} sm={6} md={6} lg={4} textAlign="center">
               <animated.img
                 src={LandImage}
-                alt=""
+                alt="."
                 style={{
                   borderRadius: '50%',
                   width: '90%',

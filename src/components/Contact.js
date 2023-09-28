@@ -66,7 +66,7 @@ const Contact = () => {
   }
 
   return (
-      <Box minHeight='91vh' paddingTop={16}>
+      <Box minHeight='100vh' paddingTop={16}>
       <Container maxWidth="sm">
         <FormContainer>
           <Typography variant="h4" gutterBottom>

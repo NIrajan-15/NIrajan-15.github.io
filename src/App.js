@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Experience from './components/Experience';
 import './css/Scroller.css';
-
+import './App.css'
 function App(){
 
 

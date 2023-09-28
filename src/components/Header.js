@@ -49,7 +49,7 @@ const navItems = ['ABOUT', 'EXPERIENCE', 'PROJECTS', 'CONTACT'];
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5, // Adjust the threshold as needed
+      threshold: 0.4, // Adjust the threshold as needed
     });
 
     navItems.forEach((item) => {

@@ -14,7 +14,7 @@ const Project = () => {
   return (
     <Box  minHeight='94vh' width='98vw' justifyContent={'center'} paddingTop={10} backgroundColor='$F5FEFD' >
       
-      <Grid container spacing={{ lg:2, md:1, xs:2, sm:2 }} justifyContent='center' paddingLeft={{xs:2.5,sm:3.5,md:4.5,lg:6 }} paddingTop={8}>
+      <Grid container spacing={{ lg:2, md:1, xs:2, sm:2 }} justifyContent='center' paddingLeft={{xs:1,sm:5,md:6,lg:8 }} paddingTop={8}>
         {projects.map((project) => (
           
           <Grid item xs={12} sm={10} md={12} lg={8} key={project.id} sx={{padding:{xs:1,sm:2,md:2,lg:6}}} >
