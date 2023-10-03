@@ -9,7 +9,7 @@ const Footer =() =>{
         
         <Grid container justifyContent='center' p={2}>
             <Grid item>
-                <a href='https://www.linkedin.com/in/niranjan-rajendran-1b1b3b1b1/' target='_blank' rel="noreferrer">
+                <a href='https://www.linkedin.com/in/nirajan-sangraula/' target='_blank' rel="noreferrer">
                     <LinkedIn sx={{fontSize:'3rem'}} />
                 </a>
             </Grid>
