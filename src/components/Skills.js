@@ -10,7 +10,7 @@ import {
   DiLinux,  
 } from 'react-icons/di'; // Import icons from 'react-icons/di' package
 
-import {SiYaml, SiDjango, SiMysql,SiAzuredevops,SiMicrosoftazure, SiGithubactions, SiPostman } from 'react-icons/si';
+import {SiYaml, SiDjango, SiMysql,SiAzuredevops,SiMicrosoftazure, SiGithubactions, SiPostman, SiSpringboot } from 'react-icons/si';
 import {FaPython, FaReact, FaNodeJs, FaDocker, FaAws, FaJira} from 'react-icons/fa';
 import {BiLogoFlask, BiLogoMongodb, BiLogoPostgresql} from 'react-icons/bi';
 
@@ -22,6 +22,7 @@ const skillsData = [
   { name: 'HTML', icon: <DiHtml5 />, bgColor: '#FFB74D' },
   { name: 'CSS', icon: <DiCss3 />, bgColor: '#FFCA28' },
   { name: 'YAML', icon: <SiYaml />, bgColor: '#7E57C2' }, // No direct YAML icon, use a suitable alternative
+  {name: 'Spring boot', icon: <SiSpringboot/>, bgColor: "#08cc7a"},
   { name: 'React', icon: <FaReact />, bgColor: '#26A69A' },
   { name: 'Node.js', icon: <FaNodeJs />, bgColor: '#8D6E63' },
   { name: 'Django', icon: <SiDjango />, bgColor: '#78909C' },

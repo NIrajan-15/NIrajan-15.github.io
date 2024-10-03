@@ -29,7 +29,7 @@ const Experience = () => {
                 </TimelineSeparator>
                 <TimelineContent >
                   <Paper elevation={3} sx={{ p: 2 }} backgroundcolor='#f0f0f0'>
-                    <Box display="flex" alignItems="center" width={250}>
+                    <Box display="flex" alignItems="center" width={350}>
                       <Typography variant="body1">
                         {experience.companyName}
                       </Typography>

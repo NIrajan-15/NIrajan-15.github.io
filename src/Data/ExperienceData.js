@@ -9,7 +9,7 @@ const  ExperienceData = () =>
           companyLogo: dxc,
           companyName: 'DXC Technology',
           jobTitle: 'Software Engineer',
-          dateWorked: 'Jun 2023 – Present',
+          dateWorked: 'Jun 2023 – Jun 2024',
           location: 'New Orleans, LA',
         },
         {
@@ -22,7 +22,7 @@ const  ExperienceData = () =>
         {
           companyLogo: dxc,
           companyName: 'DXC Technology',
-          jobTitle: 'Technical Intern',
+          jobTitle: 'Application Developer Intern',
           dateWorked: 'Jun 2022 - Aug 2022',
           location: 'New Orleans, LA',
         },
