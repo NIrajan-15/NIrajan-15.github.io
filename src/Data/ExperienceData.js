@@ -8,13 +8,13 @@ const  ExperienceData = () =>
         {
           companyLogo: dxc,
           companyName: 'DXC Technology',
-          jobTitle: 'Software Engineering Intern',
+          jobTitle: 'Software Engineer',
           dateWorked: 'Jun 2023 – Present',
           location: 'New Orleans, LA',
         },
         {
           companyLogo: lsbdc,
-          companyName: 'IBM Technology LED Grant',
+          companyName: 'Louisiana Small Business Development Center',
           jobTitle: 'Software Developer',
           dateWorked: 'Aug 2021 – Aug 2023',
           location: 'Monroe, LA',
